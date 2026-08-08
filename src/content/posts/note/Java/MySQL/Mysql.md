@@ -3326,7 +3326,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >    ![image-20260413192504041](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413192504041.png)
 >
->   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413192543973.png" alt="image-20260413192543973" style="zoom:80%;" /> <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260413192625120.png" alt="image-20260413192625120" style="zoom: 80%;" />
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413192543973.png" alt="image-20260413192543973" style="zoom:80%;" /> 
 >
 >   通过ibd2sdi指令查看表结构可见前两个隐藏字段（该表有主键所以没有 DB_ROW_ID）
 >
