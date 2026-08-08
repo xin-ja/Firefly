@@ -292,7 +292,7 @@ draft: false
 >
 >   ```java
 >   public interface List<E>{
->                                                         
+>                                                           
 >   }
 >   ```
 >
@@ -302,14 +302,14 @@ draft: false
 >
 >        ```java
 >        public class MyArrayList implements List <String>{
->                                                                                                                                                                                           
+>                                                                                                                                                                                                  
 >        }
 >        ```
 >
 >        
 >
 >     2. 实现类延续泛型，创建实现类对象时再确定类型
->                                                                                                    
+>                                                                                                        
 >        ```java
 >        public class MyArrayList<E> implements List<E>{
 >            //相当于写一个泛型类，实现泛型接口
@@ -799,14 +799,14 @@ draft: false
 >   //单列集合的stream
 >   		ArrayList<String> list = new ArrayList<>();
 >           Collections.addAll(list, "a", "b", "c","d","e","f");
->                                       
+>                                         
 >   //        //获取一条流水线，并把集合数据放入
 >   //        Stream<String> stream1 = list.stream();
 >   //        //使用终结方法打印
 >   //        stream1.forEach(s->{
 >   //            System.out.println(s);
 >   //        });
->                                       
+>                                         
 >           //简化写法
 >           list.stream().forEach(s->System.out.println(s));
 >   
@@ -878,11 +878,11 @@ draft: false
 >   ```java
 >   list.stream().map(s->Integer.parseInt(s.split("-")[1]).forEach(s->System.out.println(s)));
 >   //map里面是处理数据流中数据的自定义函数，其执行流程为
->                                     
+>                                       
 >   //1.s.split("-")[1] ：按正则表达式切割，"-" 即为"[-]"的简化，意为在 "-"处切割字符串，返回一个字符串数组 [0]为 - 的前半部分 [1]后半部分
->                                     
+>                                       
 >   //2.将从split返回数组中取出的字符串交给Integer的字符串转换函数处理
->                                     
+>                                       
 >   //3.处理完后调用Stream流中的终结方法forEach遍历，打印出结果
 >   ```
 >   
@@ -904,9 +904,9 @@ draft: false
 >
 >   ```java
 >           String[] name = {"张aa","张aa","张aa","张aa","张bbb","王cccc"};
->                                     
+>                                       
 >           Object[] arr1 = Arrays.stream(name).toArray();
->                                     
+>                                       
 >           String[] arr2 = Arrays.stream(name).toArray(size -> new String[size]);
 >   ```
 >
@@ -965,9 +965,9 @@ draft: false
 >
 >      ```java
 >         		ArrayList<String> list = new ArrayList<>();
->                                                                                      
+>                                                                                           
 >              Collections.addAll(list,"1","2","3","4","5");
->                                                                                      
+>                                                                                           
 >              list.stream().map(Integer::parseInt).forEach(System.out::println);
 >      ```
 >
@@ -990,15 +990,15 @@ draft: false
 >
 >      ```java
 >              ArrayList<String> list = new ArrayList<>();
->                                                                                      
+>                                                                                           
 >              Collections.addAll(list,"张无忌","周芷若","赵成","张强","张三丰");
->                                                                                      
+>                                                                                           
 >              //原写法
 >              list.stream().filter(name->name.length()==3).filter(name->name.startsWith("张")).forEach(s->System.out.println(s));
->                                                                                      
+>                                                                                           
 >              //方法引用写法
 >           list.stream().filter(new StringOperator()::Stringjudge).forEach(System.out::println);
->                                                                                      
+>                                                                                           
 >      //下面为定义在StringOperator类里的Stringjudge代码
 >      package XinJa.Improve.Learn;
 >      public class StringOperator {
@@ -1049,12 +1049,12 @@ draft: false
 >       
 >
 >      - 示例
->                                                                
+>                                                                    
 >        ```java
 >                ArrayList<String> list = new ArrayList<>();
->                                                                        
+>                                                                            
 >                Collections.addAll(list,"aaa","bbb","ccc","ddd");
->                                                                        
+>                                                                            
 >                //转大写
 >                list.stream().map(String::toUpperCase).forEach(System.out::println);
 >        ```
@@ -1079,15 +1079,15 @@ draft: false
 >       
 >
 >      - 示例
->                                                                
+>                                                                    
 >        ```java
 >                ArrayList<Integer> list = new ArrayList<>();
->                                                                        
+>                                                                            
 >                Collections.addAll(list,1,2,3,4,5);
->                                                                        
+>                                                                            
 >                //Lambda表达式
 >                list.stream().toArray(size -> new Integer[size]);
->                                                                                
+>                                                                                    
 >                //方法引用
 >                list.stream().toArray(Integer[]::new);
 >        ```
@@ -1158,7 +1158,7 @@ draft: false
 >
 >   ```java
 >           int[] arr = {1,2,3,4,5,6};
->                                           
+>                                             
 >           try{
 >               //可能出现异常的代码
 >               System.out.println(arr[10]);
@@ -1202,7 +1202,7 @@ draft: false
 >
 >      ```java
 >              int[] arr = {1,2,3,4,5,6};
->                                                                                      
+>                                                                                           
 >              try{
 >                  //可能出现异常的代码
 >                  System.out.println(arr[10]);
@@ -1211,7 +1211,7 @@ draft: false
 >                  System.out.println(e.toString());//java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 6
 >                  e.printStackTrace();//打印的最完整，输出结果同JVM的自动报错，但是不会停止虚拟机运行
 >              }
->                                                                                      
+>                                                                                           
 >      ```
 >
 >  
@@ -1278,13 +1278,13 @@ draft: false
 >    ```java
 >            File f = new File("src/XinJa/Improve/Learn/Actor.java");
 >            long time = f.lastModified();
->                                                 
+>                                                    
 >    		//JDK8
 >            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");//设定格式
 >            Instant t =  Instant.ofEpochMilli(time);//获取时间戳
 >            ZonedDateTime zdt = ZonedDateTime.ofInstant(t, ZoneId.systemDefault());//化为时间对象
 >            System.out.println(dtf.format(zdt));//格式化
->                                                 
+>                                                    
 >            //JDK7
 >            DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置格式
 >            Date d = new Date(time);//创建时间对象
@@ -1485,9 +1485,9 @@ draft: false
 >
 >   ```java
 >   try{
->                                 
+>                                   
 >   }catch(){
->                                 
+>                                   
 >   }finally{
 >       //finally控制的语句一定会执行，除非虚拟机停止
 >       //所以适合将close()方法放在里面
@@ -1911,7 +1911,7 @@ draft: false
 >             PrimeThread(long minPrime) {
 >                 this.minPrime = minPrime;
 >             }
->                      
+>                         
 >             //重写run方法，run方法中书写线程需要执行的代码
 >             public void run() {
 >                 // compute primes larger than minPrime
@@ -1933,19 +1933,19 @@ draft: false
 >
 >     ```java
 >       class PrimeRun implements Runnable {
->                          
+>                             
 >              long minPrime;
 >              PrimeRun(long minPrime) {
 >                  this.minPrime = minPrime;
 >              }
->                             
+>                                
 >        //实现Runnable接口并重写run
 >              public void run() {
 >                  // compute primes larger than minPrime
 >                   . . .
 >              }
 >          }
->                        
+>                           
 >     //不同于法1   法2在创建对象后需要将对象传给Thread对象
 >          PrimeRun p = new PrimeRun(143);
 >          new Thread(p).start();
@@ -2100,13 +2100,13 @@ draft: false
 >                   } catch (InterruptedException e) {
 >                       throw new RuntimeException(e);
 >                   }
->               
+>                 
 >                   ticket++;
 >                   System.out.println(getName()+"正在卖第"+ticket+"张票");
 >               }
 >           }
 >       }
->               
+>                 
 >   ```
 
 
@@ -2342,17 +2342,17 @@ draft: false
 >
 >     
 >
->     2. 提交8个任务
+> 2. 提交8个任务
 >                
->        3个被核心线程处理，3个进入排队，由于**任务队列满了**，所以再**创建2个临时线程**处理剩下的两个任务
+>    3个被核心线程处理，3个进入排队，由于**任务队列满了**，所以再**创建2个临时线程**处理剩下的两个任务
 >
 >      
 >
->     3. 提交10个任务
+> 3. 提交10个任务
 >                
->        3个核心、3个排队、3个临时， 剩下1个触发拒绝策略
+>    3个核心、3个排队、3个临时， 剩下1个触发拒绝策略
 >                
->        ![image-20260625094711782](image/image-20260625094711782.png)
+>    ![image-20260625094711782](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625094711782.png)
 >
 >  
 >
@@ -2528,15 +2528,15 @@ draft: false
 >   import java.io.IOException;
 >   import java.net.*;
 >   import java.util.Scanner;
->           
+>             
 >   public class Mysocketnet_send {
 >       static void main(String[] args) throws IOException {
 >           MulticastSocket socket = new MulticastSocket();
->           
+>             
 >           String s = "Hello World";
 >           byte[] buf = s.getBytes();
 >           DatagramPacket packet = new DatagramPacket(buf,buf.length,InetAddress.getByName("239.0.0.10"), 10086);
->           
+>             
 >           socket.send(packet);
 >           socket.close();
 >       }
@@ -2553,22 +2553,22 @@ draft: false
 >   import java.net.DatagramSocket;
 >   import java.net.InetAddress;
 >   import java.net.MulticastSocket;
->           
+>             
 >   public class Mysocketnet_receive {
 >       static void main(String[] args) throws IOException {
->           
+>             
 >           MulticastSocket socket = new MulticastSocket(10086);
 >           //需要将接收端加入该组
 >           socket.joinGroup(InetAddress.getByName("239.0.0.10"));
->           
+>             
 >           DatagramPacket packet = new DatagramPacket(new byte[1024], 1024);
 >           socket.receive(packet);
 >           byte[] data = packet.getData();
 >           String message = new String(data, 0, packet.getLength());
 >           System.out.println(message);
->           
+>             
 >           socket.close();
->           
+>             
 >       }
 >   }
 >   ```
@@ -2614,13 +2614,13 @@ draft: false
 >     public class Mysocketnet_client {
 >         static void main(String[] args) throws IOException {
 >             Socket socket = new Socket("127.0.0.1", 10000);
->                     
+>                         
 >             OutputStream os = socket.getOutputStream();
 >             os.write("Hello World".getBytes());
->                     
+>                         
 >             os.close();
 >             socket.close();
->                     
+>                         
 >         }
 >     }
 >     ```
@@ -2648,12 +2648,12 @@ draft: false
 >     import java.io.InputStream;
 >     import java.net.ServerSocket;
 >     import java.net.Socket;
->                     
+>                         
 >     public class Mysocketnet_server {
 >         static void main(String[] args) throws IOException {
 >             ServerSocket ss = new ServerSocket(10000);
 >             Socket socket = ss.accept();
->                     
+>                         
 >             InputStream is = socket.getInputStream();
 >             //此处可以使用转换流防止中文乱码
 >             int b;
@@ -2663,7 +2663,7 @@ draft: false
 >             is.close();
 >             socket.close();
 >             ss.close();
->                     
+>                         
 >         }
 >     }
 >     ```
