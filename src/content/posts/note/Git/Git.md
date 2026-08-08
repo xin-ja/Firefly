@@ -1,11 +1,18 @@
----
+\---
+
 title: Git
+
 published: 2026-08-08
+
 description: Git学习
+
 tags: [后端, Git]
-category: 后端Git
+
+category: Git
+
 draft: false
----
+
+\---
 
 # Git
 
@@ -190,7 +197,7 @@ git merge origin/branch-name
 
 ## git的分支
 
-![img](https://static.jyshare.com/images/svg/git-brance.svg)
+![img](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/git/git-brance.svg)
 
 git的分支实际上是指向更改快照的指针
 
