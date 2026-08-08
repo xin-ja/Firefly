@@ -1,4 +1,4 @@
-\---
+---
 
 title: MySQL
 
@@ -12,7 +12,7 @@ category:  MySQL
 
 draft: false
 
-\---
+---
 
 # DataBase_Learn (基础)
 

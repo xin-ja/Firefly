@@ -1,4 +1,4 @@
-\---
+---
 
 title: Git
 
@@ -12,7 +12,7 @@ category: Git
 
 draft: false
 
-\---
+---
 
 # Git
 

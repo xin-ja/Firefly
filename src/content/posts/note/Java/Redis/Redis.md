@@ -1,4 +1,4 @@
-\---
+---
 
 title: Redis
 
@@ -12,7 +12,7 @@ category:  Redis
 
 draft: false
 
-\---
+---
 
 # Redis
 
