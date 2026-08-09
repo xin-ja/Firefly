@@ -292,7 +292,7 @@ draft: false
 >
 >   ```java
 >   public interface List<E>{
->                                                           
+>                                                             
 >   }
 >   ```
 >
@@ -302,14 +302,14 @@ draft: false
 >
 >        ```java
 >        public class MyArrayList implements List <String>{
->                                                                                                                                                                                                  
+>                                                                                                                                                                                                         
 >        }
 >        ```
 >
 >        
 >
 >     2. 实现类延续泛型，创建实现类对象时再确定类型
->                                                                                                        
+>                                                                                                            
 >        ```java
 >        public class MyArrayList<E> implements List<E>{
 >            //相当于写一个泛型类，实现泛型接口
@@ -755,7 +755,7 @@ draft: false
 >
 >   对应方法： **Map.ofEntries**
 >
-> ![image-20260617163501312](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260617163501312.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260617163501312.png" alt="image-20260617163501312" style="zoom:100%;" />
 >
 >     
 
@@ -799,14 +799,14 @@ draft: false
 >   //单列集合的stream
 >   		ArrayList<String> list = new ArrayList<>();
 >           Collections.addAll(list, "a", "b", "c","d","e","f");
->                                         
+>                                           
 >   //        //获取一条流水线，并把集合数据放入
 >   //        Stream<String> stream1 = list.stream();
 >   //        //使用终结方法打印
 >   //        stream1.forEach(s->{
 >   //            System.out.println(s);
 >   //        });
->                                         
+>                                           
 >           //简化写法
 >           list.stream().forEach(s->System.out.println(s));
 >   
@@ -871,18 +871,18 @@ draft: false
 >
 >   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260617181207922.png" alt="image-20260617181207922" style="zoom: 80%;" />
 >
->    ![image-20260617181311239](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260617181311239.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260617181311239.png" alt="image-20260617181311239" style="zoom:100%;" />
 >   
 >   以此代码为例
 >   
 >   ```java
 >   list.stream().map(s->Integer.parseInt(s.split("-")[1]).forEach(s->System.out.println(s)));
 >   //map里面是处理数据流中数据的自定义函数，其执行流程为
->                                       
+>                                         
 >   //1.s.split("-")[1] ：按正则表达式切割，"-" 即为"[-]"的简化，意为在 "-"处切割字符串，返回一个字符串数组 [0]为 - 的前半部分 [1]后半部分
->                                       
+>                                         
 >   //2.将从split返回数组中取出的字符串交给Integer的字符串转换函数处理
->                                       
+>                                         
 >   //3.处理完后调用Stream流中的终结方法forEach遍历，打印出结果
 >   ```
 >   
@@ -904,9 +904,9 @@ draft: false
 >
 >   ```java
 >           String[] name = {"张aa","张aa","张aa","张aa","张bbb","王cccc"};
->                                       
+>                                         
 >           Object[] arr1 = Arrays.stream(name).toArray();
->                                       
+>                                         
 >           String[] arr2 = Arrays.stream(name).toArray(size -> new String[size]);
 >   ```
 >
@@ -965,9 +965,9 @@ draft: false
 >
 >      ```java
 >         		ArrayList<String> list = new ArrayList<>();
->                                                                                           
+>                                                                                                
 >              Collections.addAll(list,"1","2","3","4","5");
->                                                                                           
+>                                                                                                
 >              list.stream().map(Integer::parseInt).forEach(System.out::println);
 >      ```
 >
@@ -990,15 +990,15 @@ draft: false
 >
 >      ```java
 >              ArrayList<String> list = new ArrayList<>();
->                                                                                           
+>                                                                                                
 >              Collections.addAll(list,"张无忌","周芷若","赵成","张强","张三丰");
->                                                                                           
+>                                                                                                
 >              //原写法
 >              list.stream().filter(name->name.length()==3).filter(name->name.startsWith("张")).forEach(s->System.out.println(s));
->                                                                                           
+>                                                                                                
 >              //方法引用写法
 >           list.stream().filter(new StringOperator()::Stringjudge).forEach(System.out::println);
->                                                                                           
+>                                                                                                
 >      //下面为定义在StringOperator类里的Stringjudge代码
 >      package XinJa.Improve.Learn;
 >      public class StringOperator {
@@ -1049,12 +1049,12 @@ draft: false
 >       
 >
 >      - 示例
->                                                                    
+>                                                                        
 >        ```java
 >                ArrayList<String> list = new ArrayList<>();
->                                                                            
+>                                                                                
 >                Collections.addAll(list,"aaa","bbb","ccc","ddd");
->                                                                            
+>                                                                                
 >                //转大写
 >                list.stream().map(String::toUpperCase).forEach(System.out::println);
 >        ```
@@ -1079,15 +1079,15 @@ draft: false
 >       
 >
 >      - 示例
->                                                                    
+>                                                                        
 >        ```java
 >                ArrayList<Integer> list = new ArrayList<>();
->                                                                            
+>                                                                                
 >                Collections.addAll(list,1,2,3,4,5);
->                                                                            
+>                                                                                
 >                //Lambda表达式
 >                list.stream().toArray(size -> new Integer[size]);
->                                                                                    
+>                                                                                        
 >                //方法引用
 >                list.stream().toArray(Integer[]::new);
 >        ```
@@ -1126,7 +1126,7 @@ draft: false
 >
 > 2. 作为方法内部一种特殊返回值，以便通知调用者底层执行情况
 >
->    ![image-20260618225154656](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260618225154656.png) 
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260618225154656.png" alt="image-20260618225154656" style="zoom:100%;" /> 
 >
 >    如上图，当数据不在范围内时，使用**throw**一个RuntimeException对象去报错  通知调用者
 
@@ -1158,7 +1158,7 @@ draft: false
 >
 >   ```java
 >           int[] arr = {1,2,3,4,5,6};
->                                             
+>                                               
 >           try{
 >               //可能出现异常的代码
 >               System.out.println(arr[10]);
@@ -1202,7 +1202,7 @@ draft: false
 >
 >      ```java
 >              int[] arr = {1,2,3,4,5,6};
->                                                                                           
+>                                                                                                
 >              try{
 >                  //可能出现异常的代码
 >                  System.out.println(arr[10]);
@@ -1211,7 +1211,7 @@ draft: false
 >                  System.out.println(e.toString());//java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 6
 >                  e.printStackTrace();//打印的最完整，输出结果同JVM的自动报错，但是不会停止虚拟机运行
 >              }
->                                                                                           
+>                                                                                                
 >      ```
 >
 >  
@@ -1278,13 +1278,13 @@ draft: false
 >    ```java
 >            File f = new File("src/XinJa/Improve/Learn/Actor.java");
 >            long time = f.lastModified();
->                                                    
+>                                                       
 >    		//JDK8
 >            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");//设定格式
 >            Instant t =  Instant.ofEpochMilli(time);//获取时间戳
 >            ZonedDateTime zdt = ZonedDateTime.ofInstant(t, ZoneId.systemDefault());//化为时间对象
 >            System.out.println(dtf.format(zdt));//格式化
->                                                    
+>                                                       
 >            //JDK7
 >            DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置格式
 >            Date d = new Date(time);//创建时间对象
@@ -1310,7 +1310,7 @@ draft: false
 
 #### 获取/遍历File中的内容
 
-> ![image-20260619085152889](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260619085152889.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260619085152889.png" alt="image-20260619085152889" style="zoom:100%;" />
 >
 > - 返回的数组，存储了某文件夹下所有文件，可以用增强for遍历
 >
@@ -1485,9 +1485,9 @@ draft: false
 >
 >   ```java
 >   try{
->                                   
+>                                     
 >   }catch(){
->                                   
+>                                     
 >   }finally{
 >       //finally控制的语句一定会执行，除非虚拟机停止
 >       //所以适合将close()方法放在里面
@@ -1911,7 +1911,7 @@ draft: false
 >             PrimeThread(long minPrime) {
 >                 this.minPrime = minPrime;
 >             }
->                         
+>                            
 >             //重写run方法，run方法中书写线程需要执行的代码
 >             public void run() {
 >                 // compute primes larger than minPrime
@@ -1933,19 +1933,19 @@ draft: false
 >
 >     ```java
 >       class PrimeRun implements Runnable {
->                             
+>                                
 >              long minPrime;
 >              PrimeRun(long minPrime) {
 >                  this.minPrime = minPrime;
 >              }
->                                
+>                                   
 >        //实现Runnable接口并重写run
 >              public void run() {
 >                  // compute primes larger than minPrime
 >                   . . .
 >              }
 >          }
->                           
+>                              
 >     //不同于法1   法2在创建对象后需要将对象传给Thread对象
 >          PrimeRun p = new PrimeRun(143);
 >          new Thread(p).start();
@@ -2100,13 +2100,13 @@ draft: false
 >                   } catch (InterruptedException e) {
 >                       throw new RuntimeException(e);
 >                   }
->                 
+>                   
 >                   ticket++;
 >                   System.out.println(getName()+"正在卖第"+ticket+"张票");
 >               }
 >           }
 >       }
->                 
+>                   
 >   ```
 
 
@@ -2282,7 +2282,7 @@ draft: false
 >
 >   在Java中有现成的**线程池服务**对象。直接使用即可
 >
->   ![image-20260625091942783](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625091942783.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625091942783.png" alt="image-20260625091942783" style="zoom:100%;" />
 >
 >   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625092733051.png" alt="image-20260625092733051" style="zoom:50%;" /> 
 
@@ -2352,7 +2352,7 @@ draft: false
 >                
 >    3个核心、3个排队、3个临时， 剩下1个触发拒绝策略
 >                
->    ![image-20260625094711782](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625094711782.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625094711782.png" alt="image-20260625094711782" style="zoom:100%;" />
 >
 >  
 >
@@ -2399,7 +2399,7 @@ draft: false
 >
 >   有两个直接子类 一个为IPV4、一个为IPV6。不对外提供构造方法，需要使用静态方法getByName()、getHostName()获取，调用此静态方法时会自动识别设备是IPV4还是6并返回对应子类
 >
->   ![image-20260625102757007](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625102757007.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625102757007.png" alt="image-20260625102757007" style="zoom:100%;" />
 
 
 
@@ -2528,15 +2528,15 @@ draft: false
 >   import java.io.IOException;
 >   import java.net.*;
 >   import java.util.Scanner;
->             
+>               
 >   public class Mysocketnet_send {
 >       static void main(String[] args) throws IOException {
 >           MulticastSocket socket = new MulticastSocket();
->             
+>               
 >           String s = "Hello World";
 >           byte[] buf = s.getBytes();
 >           DatagramPacket packet = new DatagramPacket(buf,buf.length,InetAddress.getByName("239.0.0.10"), 10086);
->             
+>               
 >           socket.send(packet);
 >           socket.close();
 >       }
@@ -2553,22 +2553,22 @@ draft: false
 >   import java.net.DatagramSocket;
 >   import java.net.InetAddress;
 >   import java.net.MulticastSocket;
->             
+>               
 >   public class Mysocketnet_receive {
 >       static void main(String[] args) throws IOException {
->             
+>               
 >           MulticastSocket socket = new MulticastSocket(10086);
 >           //需要将接收端加入该组
 >           socket.joinGroup(InetAddress.getByName("239.0.0.10"));
->             
+>               
 >           DatagramPacket packet = new DatagramPacket(new byte[1024], 1024);
 >           socket.receive(packet);
 >           byte[] data = packet.getData();
 >           String message = new String(data, 0, packet.getLength());
 >           System.out.println(message);
->             
+>               
 >           socket.close();
->             
+>               
 >       }
 >   }
 >   ```
@@ -2614,13 +2614,13 @@ draft: false
 >     public class Mysocketnet_client {
 >         static void main(String[] args) throws IOException {
 >             Socket socket = new Socket("127.0.0.1", 10000);
->                         
+>                             
 >             OutputStream os = socket.getOutputStream();
 >             os.write("Hello World".getBytes());
->                         
+>                             
 >             os.close();
 >             socket.close();
->                         
+>                             
 >         }
 >     }
 >     ```
@@ -2648,12 +2648,12 @@ draft: false
 >     import java.io.InputStream;
 >     import java.net.ServerSocket;
 >     import java.net.Socket;
->                         
+>                             
 >     public class Mysocketnet_server {
 >         static void main(String[] args) throws IOException {
 >             ServerSocket ss = new ServerSocket(10000);
 >             Socket socket = ss.accept();
->                         
+>                             
 >             InputStream is = socket.getInputStream();
 >             //此处可以使用转换流防止中文乱码
 >             int b;
@@ -2663,7 +2663,7 @@ draft: false
 >             is.close();
 >             socket.close();
 >             ss.close();
->                         
+>                             
 >         }
 >     }
 >     ```
@@ -2702,11 +2702,11 @@ draft: false
 >
 > 2. 类名.class   加载阶段
 >
->    ![image-20260625123529162](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625123529162.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625123529162.png" alt="image-20260625123529162" style="zoom:100%;" />
 >
 > 3. 对象.getClass();   运行阶段
 >
->    ![image-20260625123536376](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625123536376.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625123536376.png" alt="image-20260625123536376" style="zoom:100%;" />
 >
 > 三者完全一致
 >
@@ -2730,7 +2730,7 @@ draft: false
 >
 > - 利用反射获取到的构造方法创建对象
 >
->   ![image-20260625124846908](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625124846908.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625124846908.png" alt="image-20260625124846908" style="zoom:100%;" />
 >
 >   若获取到了private修饰的构造方法，可以使用setAccessible(true);强制使其可以被访问 ———  暴力反射
 
@@ -2807,7 +2807,7 @@ draft: false
 >
 > - 在reflect包下有一个Proxy类：提供了为对象产生代理对象的方法
 >
->   ![image-20260625153048427](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625153048427.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260625153048427.png" alt="image-20260625153048427" style="zoom:100%;" />
 >
 >   ​			参数一类加载器用于加载类，一般会写`当前类.class.getClassLoader()`,作用是：找到当前类的类加载器作为此方法的第一个参数，传入后会**调用该加载器去加载当前创建的代理类**
 >

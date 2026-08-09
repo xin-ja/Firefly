@@ -18,7 +18,7 @@ draft: false
 
 ## 准备工作
 
-![image-20260630100211951](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630100211951.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630100211951.png" alt="image-20260630100211951" style="zoom:100%;" />
 
 - 开发规范 — Restful
 
@@ -80,7 +80,7 @@ draft: false
 
 @RequestParam(defaultValue=“1”) 可以设置默认值
 
-![image-20260630132419761](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630132419761.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630132419761.png" alt="image-20260630132419761" style="zoom:100%;" />
 
 - **分页查询逻辑较为复杂但步骤固定**，有Mybatis插件PageHelper简化开发
 
@@ -94,7 +94,7 @@ draft: false
 
   - Mapper层
 
-    ![image-20260630133509624](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630133509624.png) 
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630133509624.png" alt="image-20260630133509624" style="zoom:100%;" /> 
 
   - Service层
 
@@ -142,17 +142,17 @@ draft: false
 
   MutipartFile中提供了transferTo方法用于转存
 
-  ![image-20260630153835923](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630153835923.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630153835923.png" alt="image-20260630153835923" style="zoom:100%;" />
 
   配合MutiparFile中的getOriginalFilename实现文件的本地持久化保存
 
   单单通过以上操作文件名可能重复，配合uuid生成唯一的文件名
 
-  ![image-20260630154151773](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630154151773.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630154151773.png" alt="image-20260630154151773" style="zoom:100%;" />
 
   SpringBoot当中最大文件上传大小为1M，可通过配置修改
 
-  ![image-20260630154352894](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630154352894.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630154352894.png" alt="image-20260630154352894" style="zoom:100%;" />
 
 
 
@@ -183,7 +183,7 @@ draft: false
 
 - application.properties
 
-  ![image-20260630174322054](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630174322054.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260630174322054.png" alt="image-20260630174322054" style="zoom:100%;" />
 
   参数可能会发生变化，若发生变化需要重新编译代码，且参数可能与其他源文件耦合，不便于维护和管理
 
@@ -281,7 +281,7 @@ draft: false
 
      - Cookie基本操作
 
-       ![image-20260701131137287](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701131137287.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701131137287.png" alt="image-20260701131137287" style="zoom:100%;" />
 
        如图所示，通过HttpServletResponse这个对象中的addCookie方法就可以在回复报文中设置Cookie值，并且在往后的请求中可以通过getCookie方法获取Cookie值
 
@@ -301,7 +301,7 @@ draft: false
 
      - Session基本操作
 
-       ![image-20260701132237501](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701132237501.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701132237501.png" alt="image-20260701132237501" style="zoom:100%;" />
 
        如图所示，通过HttpSesion中的setAttribute和getAttribute方法进行历史操作的存储与读取      tip：/s2接口中接收HttpServletRquest对象，并通过其getSession方法先找到Session才可以进行Session的读取
 
@@ -333,7 +333,7 @@ draft: false
 
 - 组成
 
-  ![image-20260701134349496](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701134349496.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701134349496.png" alt="image-20260701134349496" style="zoom:100%;" />
 
   三部分之间用  .  分割
 
@@ -357,7 +357,7 @@ draft: false
 
      生成
 
-     ![image-20260701140020916](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701140020916.png)
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701140020916.png" alt="image-20260701140020916" style="zoom:100%;" />
 
      解析
 
@@ -369,7 +369,7 @@ draft: false
 
   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701142512186.png" alt="image-20260701142512186" style="zoom:50%;" />
 
-  ![image-20260701142452631](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701142452631.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701142452631.png" alt="image-20260701142452631" style="zoom:100%;" />
 
   如图所示，登陆成功后jwt令牌会被存储在浏览器本地
 
@@ -391,7 +391,7 @@ draft: false
 
   2. 配置Filter：加上**@WebFilter**注解，配置拦截资源的路径。启动类上加**@ServletComponentScan**开启Servlet组件支持
 
-     ![image-20260701144756600](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701144756600.png)
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701144756600.png" alt="image-20260701144756600" style="zoom:100%;" />
 
 - 详细
 
@@ -512,13 +512,13 @@ draft: false
 
 ### 拦截器
 
-![image-20260701154918718](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701154918718.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701154918718.png" alt="image-20260701154918718" style="zoom:100%;" />
 
 - 快速入门
 
   1. 定义拦截器，实现HandlerInterceptor，并重写其方法
 
-     ![image-20260701155059769](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701155059769.png)
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701155059769.png" alt="image-20260701155059769" style="zoom:100%;" />
 
   2. 注册拦截器
 
@@ -528,9 +528,9 @@ draft: false
 
   - 拦截路径：拦截器不仅可以指定要拦截哪些路径（addPathPatterns），还可以指定哪些路径不拦截（excludePathPatterns）
 
-    ![image-20260701155927836](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701155927836.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701155927836.png" alt="image-20260701155927836" style="zoom:100%;" />
 
-    ![image-20260701155942210](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701155942210.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701155942210.png" alt="image-20260701155942210" style="zoom:100%;" />
 
    
 
@@ -548,13 +548,13 @@ draft: false
 
       拦截器为SpringBoot提供，所以通过过滤器后会进入SpringBoot环境中，拦截器的位置位于前端控制器和Controller之间，所以拦截器是用于控制请求能否进入Controller的
 
-      ![image-20260701160558462](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701160558462.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701160558462.png" alt="image-20260701160558462" style="zoom:100%;" />
 
     
 
     - 二者对比
 
-      ![image-20260701160724666](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701160724666.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701160724666.png" alt="image-20260701160724666" style="zoom:100%;" />
 
     
 
@@ -566,7 +566,7 @@ draft: false
 
 ## 异常处理
 
-![image-20260701161533550](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701161533550.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701161533550.png" alt="image-20260701161533550" style="zoom:100%;" />
 
 - 处理方案
 
@@ -594,7 +594,7 @@ draft: false
 
   - 除此之外，可以在appropriate.yml配置文件中开启Spring事务管理日志方便查看事务执行情况
 
-    ![image-20260701174323305](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701174323305.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701174323305.png" alt="image-20260701174323305" style="zoom:100%;" />
 
 - 演示
 

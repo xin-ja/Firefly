@@ -426,7 +426,7 @@ draft: false
 
 - 若Value是一个对象，可以将对象序列化为JSON字符串后存储
 
-  ![image-20260720131745366](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720131745366.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720131745366.png" alt="image-20260720131745366" style="zoom:100%;" />
 
 ---
 
@@ -611,7 +611,7 @@ draft: false
 
 ### 0.数据库设计
 
-![image-20260720162740638](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720162740638.png) 
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720162740638.png" alt="image-20260720162740638" style="zoom:100%;" /> 
 
 
 
@@ -619,11 +619,11 @@ draft: false
 
 - 流程
 
-  ![image-20260720202911317](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720202911317.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720202911317.png" alt="image-20260720202911317" style="zoom:100%;" />
 
 - 验证码API请求
 
-  ![image-20260720203128996](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720203128996.png) 
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720203128996.png" alt="image-20260720203128996" style="zoom:100%;" /> 
 
 - 验证码service层(部分)
 
@@ -652,7 +652,7 @@ draft: false
 
 - 登录API请求
 
-  ![image-20260720204544281](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720204544281.png) 
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720204544281.png" alt="image-20260720204544281" style="zoom:100%;" /> 
 
 - 登录校验
 
@@ -677,7 +677,7 @@ draft: false
 
   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720220903331.png" alt="image-20260720220903331" style="zoom:33%;" /> 
 
-  ![image-20260720220520276](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720220520276.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260720220520276.png" alt="image-20260720220520276" style="zoom:100%;" />
 
   可见，此处通过手动维护Redis实现了类似JWT令牌的功能使得信息可以被共享
 
@@ -708,7 +708,7 @@ draft: false
 
 - 三种缓存更新策略
 
-  ![image-20260721105835760](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721105835760.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721105835760.png" alt="image-20260721105835760" style="zoom:100%;" />
 
   - 低一致性需求：使用内存淘汰机制，例如：店铺类型的查询缓存
   - 高一致性需求：主动更新，并以超时剔除座位兜底，例如：店铺详情查询缓存
@@ -787,7 +787,7 @@ draft: false
 
 - 项目的集成
 
-  ![image-20260721115814140](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721115814140.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721115814140.png" alt="image-20260721115814140" style="zoom:100%;" />
 
 ---
 
@@ -865,7 +865,7 @@ draft: false
 
   - 逻辑过期
 
-    ![image-20260721135003679](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721135003679.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721135003679.png" alt="image-20260721135003679" style="zoom:100%;" />
     
     tip：此处的业务场景是热key，是针对某一个key解决问题，热key会进行**缓存预热**。所以key肯定会存在缓存里面，若未命中说明肯定不是该热key
 
@@ -875,7 +875,7 @@ draft: false
 
 - 将一些常用的缓存解决策略封装成工具类
 
-  ![image-20260721142657213](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721142657213.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721142657213.png" alt="image-20260721142657213" style="zoom:100%;" />
 
 - 使用了**泛型编程思想**
 
@@ -905,7 +905,7 @@ draft: false
 
   为了增加ID的安全性，我们可以不直接使用Redis的自增数值，而是**拼接一些其他信息** 
 
-  ![image-20260721164144417](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721164144417.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721164144417.png" alt="image-20260721164144417" style="zoom:100%;" />
 
   当在同一时刻有多比订单时，就将序列号自增以确保订单号的一致
 
@@ -946,11 +946,11 @@ draft: false
 
 #### 优惠卷秒杀（基础）
 
-![image-20260721171903717](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721171903717.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721171903717.png" alt="image-20260721171903717" style="zoom:100%;" />
 
 - 流程
 
-  ![image-20260721173346425](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721173346425.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721173346425.png" alt="image-20260721173346425" style="zoom:100%;" />
 
 - 上述流程只是最基础的流程，无法完全解决秒杀时的超卖等问题
 
@@ -975,7 +975,7 @@ draft: false
 
       增加一个额外字段version，当数据被修改时version自增
 
-      ![image-20260721175549347](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721175549347.png) 
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721175549347.png" alt="image-20260721175549347" style="zoom:100%;" /> 
 
     - CAS法 （compare and set）
 
@@ -987,7 +987,7 @@ draft: false
 
 - 秒杀券只能一人一张
 
-  ![image-20260721183343482](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721183343482.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721183343482.png" alt="image-20260721183343482" style="zoom:100%;" />
 
 - 上述流程只是基础版的，若是请求速度足够快（脚本），产生足够多的线程仍然可以抢到多单。**仍然存在线程安全问题**。而由于此处是在表中插入数据，所以需要使用悲观锁 — 表中数据不存在时无法判别版本
 
@@ -1003,7 +1003,7 @@ draft: false
 
   - 集群模式下
 
-    ![image-20260721192149882](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721192149882.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260721192149882.png" alt="image-20260721192149882" style="zoom:100%;" />
 
   可见在集群模式下，每个单体都会有独自的JVM。**但是各个JVM之间相互独立，只能监视自己单体内的锁**
 
@@ -1017,11 +1017,11 @@ draft: false
 
 - 满足分布式系统或集群模式下多线程可见且互斥的锁
 
-  ![image-20260722094600372](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722094600372.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722094600372.png" alt="image-20260722094600372" style="zoom:100%;" />
 
 - 实现分布式锁的三种常见方法
 
-  ![image-20260722095642749](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722095642749.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722095642749.png" alt="image-20260722095642749" style="zoom:100%;" />
 
   tip：MySQL的实现是利用执行事务时的互斥锁
 
@@ -1076,7 +1076,7 @@ draft: false
 
     在Lua脚本中提供了redis.call()去调用redis
 
-    ![image-20260722110730954](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722110730954.png) 
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722110730954.png" alt="image-20260722110730954" style="zoom:100%;" /> 
 
     Redis中提供了**EVAL命令**去执行脚本
 
@@ -1086,7 +1086,7 @@ draft: false
 
     区分了key参数和其他参数后，key类型参数会被放入KEYS数组，其他参数被放入ARGV数组，在脚本中可以从这两个数组中获取参数
 
-    ![image-20260722111519344](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722111519344.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722111519344.png" alt="image-20260722111519344" style="zoom:100%;" />
 
     Lua脚本语言中数组下标从1开始
 
@@ -1193,7 +1193,7 @@ draft: false
 
 - Redisson可重试锁原理
 
-  ![image-20260722133700083](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722133700083.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722133700083.png" alt="image-20260722133700083" style="zoom:100%;" />
 
   1. 尝试获取锁，尝试后返回ttl  若ttl为null说明获取成功，若当前锁已经被拿走了则返回当前锁的剩余ttl
 
@@ -1244,23 +1244,23 @@ draft: false
   1. 将判断秒杀库存，校验一人一单等资格校验信息**放入Redis**,并由**线程1**在Redis中完成校验工作；  完成校验工作后将信息**存入阻塞队列**
   2. **线程2**在Tomcat服务器中先在阻塞队列中读取信息，再完成对MySQL的操作—将读取到的信息存入数据库  完成信息的**异步入库** 
 
-  ![image-20260722143203920](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722143203920.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722143203920.png" alt="image-20260722143203920" style="zoom:100%;" />
 
 - 具体实现
 
   - Redis中的信息存储
 
-    ![image-20260722143407967](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722143407967.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722143407967.png" alt="image-20260722143407967" style="zoom:100%;" />
 
     需要存储商品库存和买过该商品的用户（使用Set存储，避免重复）
 
   - 流程
 
-    ![image-20260722143534081](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722143534081.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722143534081.png" alt="image-20260722143534081" style="zoom:100%;" />
 
     0代表有资格，1、2代表没资格。为了确保操作Redis的原子性，**需要写LUA脚本** 
 
-    ![image-20260722143653006](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722143653006.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260722143653006.png" alt="image-20260722143653006" style="zoom:100%;" />
 
     后续在阻塞队列中拿取信息，并写入MySQL即可
 
@@ -1280,7 +1280,7 @@ draft: false
   2. 生产者：发送消息给消息队列
   3. 消费者：从消息队列获取消息并处理
 
-  ![image-20260723101314526](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723101314526.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723101314526.png" alt="image-20260723101314526" style="zoom:100%;" />
 
   - 优点
 
@@ -1338,13 +1338,13 @@ draft: false
 
   - 写消息
 
-    ![image-20260723104517566](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723104517566.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723104517566.png" alt="image-20260723104517566" style="zoom:100%;" />
 
   - 读消息
 
-    ![image-20260723104902601](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723104902601.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723104902601.png" alt="image-20260723104902601" style="zoom:100%;" />
 
-    ![image-20260723104915530](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723104915530.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723104915530.png" alt="image-20260723104915530" style="zoom:100%;" />
 
   - 存在问题
 
@@ -1358,9 +1358,9 @@ draft: false
     2. 消费者组会维护一个消息标识，记录最后一个被处理的消息，这样哪怕宕机重启也知道上次读到哪了，用于确保每一个消息都会被消费
     3. 消息确认，消费者收到消息后，消息处于pending状态，并存入pending-list。处理完后通过XACK确认消息，标记消息为已处理，从pending-list中移除
 
-    ![image-20260723110209012](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723110209012.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723110209012.png" alt="image-20260723110209012" style="zoom:100%;" />
 
-    ![image-20260723110659974](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723110659974.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723110659974.png" alt="image-20260723110659974" style="zoom:100%;" />
 
     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723111356418.png" alt="image-20260723111356418" style="zoom: 50%;" />
 
@@ -1368,7 +1368,7 @@ draft: false
 
 - 项目集成
 
-  ![image-20260723112012330](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723112012330.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723112012330.png" alt="image-20260723112012330" style="zoom:100%;" />
 
   [视频](https://www.bilibili.com/video/BV1cr4y1671t?spm_id_from=333.788.player.switch&vd_source=d6f1919e59f384773719ad5aa3d3a0a9&p=77)
 
@@ -1380,7 +1380,7 @@ draft: false
 
 - 涉及到的表
 
-  ![image-20260723131043591](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723131043591.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723131043591.png" alt="image-20260723131043591" style="zoom:100%;" />
 
 
 
@@ -1388,7 +1388,7 @@ draft: false
 
 - 需求
 
-  ![image-20260723134204536](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723134204536.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723134204536.png" alt="image-20260723134204536" style="zoom:100%;" />
 
 - 实现思路
 
@@ -1400,11 +1400,11 @@ draft: false
 
 - 需求
 
-  ![image-20260723140725060](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723140725060.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723140725060.png" alt="image-20260723140725060" style="zoom:100%;" />
 
   类似微信朋友圈的点赞排序
 
-  ![image-20260723140904295](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723140904295.png) 
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723140904295.png" alt="image-20260723140904295" style="zoom:100%;" /> 
 
 - 为了实现排行的功能，原先的Set就无法满足了，需要使用**SortedSet** 
 
@@ -1418,11 +1418,11 @@ draft: false
 
 - 接口
 
-  ![image-20260723145411240](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723145411240.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723145411240.png" alt="image-20260723145411240" style="zoom:100%;" />
 
 - 涉及到的表
 
-  ![image-20260723145531697](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723145531697.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723145531697.png" alt="image-20260723145531697" style="zoom:100%;" />
 
 
 
@@ -1430,7 +1430,7 @@ draft: false
 
 - 接口
 
-  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723151839391.png" alt="image-20260723151839391" style="zoom:50%;" /> ![image-20260723152824769](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723152824769.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723151839391.png" alt="image-20260723151839391" style="zoom:50%;" /> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723152824769.png" alt="image-20260723152824769" style="zoom:100%;" />
 
 - 思路
 
@@ -1460,7 +1460,7 @@ draft: false
 
     也称读扩散
 
-    ![image-20260723154836827](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723154836827.png) 
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723154836827.png" alt="image-20260723154836827" style="zoom:100%;" /> 
 
     只有在读取的时候才会进行消息的拉取和排序，利于节省内存空间
 
@@ -1526,7 +1526,7 @@ draft: false
     
     滚动分页接口
     
-    ![image-20260723164153818](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723164153818.png) 
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260723164153818.png" alt="image-20260723164153818" style="zoom:100%;" /> 
 
 ---
 
@@ -1624,7 +1624,7 @@ draft: false
 
 - 项目集成（签到功能）
 
-  ![image-20260724123759038](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260724123759038.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260724123759038.png" alt="image-20260724123759038" style="zoom:100%;" />
 
   操作BitMap需要使用**opsForValue**
 
@@ -1632,7 +1632,7 @@ draft: false
 
 - 统计连续签到次数
 
-  ![image-20260724130026659](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260724130026659.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260724130026659.png" alt="image-20260724130026659" style="zoom:100%;" />
 
   - 如何得到本月到今天为止的所有签到数据？
 
@@ -1718,7 +1718,7 @@ draft: false
     3. 子进程通过页表读取物理内存中的内容并写新RDB文件替换旧文件
     4. 当子进程进行拷贝时，物理内存会被设置read-only，主进程若要继续写入数据，需要使用到**copy-on-write**技术 （将相应的物理内存拷贝一份，主进程的页表映射临时改到那一份，使得主进程在拷贝内存中写入）
 
-    ![image-20260726111235127](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726111235127.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726111235127.png" alt="image-20260726111235127" style="zoom:100%;" />
 
     - tip：由copy-on-write技术可推测出，极端情况下需要拷贝所有的数据，即Redis所占内存翻倍。所以Redis部署时需要预留一定内存空间
 
@@ -1738,7 +1738,7 @@ draft: false
 
   AOF默认关闭，需要修改redis.config开启
 
-  ![image-20260726112702063](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726112702063.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726112702063.png" alt="image-20260726112702063" style="zoom:100%;" />
 
   - 一般使用everysec，always导致磁盘IO过多、no会导致过多数据丢失
 
@@ -1748,7 +1748,7 @@ draft: false
 
   在配置文件中可以配置bgrewriteaof的自动触发
 
-  ![image-20260726115310861](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726115310861.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726115310861.png" alt="image-20260726115310861" style="zoom:100%;" />
 
 
 
@@ -1787,7 +1787,7 @@ draft: false
 
   2. 主从第一次同步是全量同步，但如果slave重启后同步，则会执行**增量同步** 
 
-     ![image-20260726122806711](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726122806711.png)
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726122806711.png" alt="image-20260726122806711" style="zoom:100%;" />
 
      通过ReplicationId相同判断已经进行过全量同步了，只需要通过repl_bakLog进行增量同步即可（对比offset得出哪些数据是未同步的）
 
@@ -1799,11 +1799,11 @@ draft: false
 
     - 当slave和master的差距**小于环的大小时**即可进行增量同步
 
-      ![image-20260726123257867](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726123257867.png)  ![image-20260726123305812](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726123305812.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726123257867.png" alt="image-20260726123257867" style="zoom:100%;" />  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726123305812.png" alt="image-20260726123305812" style="zoom:100%;" />
 
     - 当slave和master的差距大于环的大小时，无法进行增量同步  只能进行全量同步了
 
-        ![image-20260726123441022](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726123441022.png)
+        <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726123441022.png" alt="image-20260726123441022" style="zoom:100%;" />
 
 - 主从配置的优化   —   **优化全量同步**
 
@@ -1877,7 +1877,7 @@ draft: false
     2. Sentinel向其他所有slave发送slaveof [新masterIp]，让这些结点都成为新master的slave，开始从新master上同步数据
     3. 最后，Sentinel将故障结点标记为slave，当故障节点恢复后自动成为新master的slave
 
-    ![image-20260726130938720](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726130938720.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726130938720.png" alt="image-20260726130938720" style="zoom:100%;" />
 
 
 
@@ -1885,7 +1885,7 @@ draft: false
 
   1. 为每个哨兵配置sentinel.conf配置文件
 
-     ![image-20260726131355386](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726131355386.png)
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726131355386.png" alt="image-20260726131355386" style="zoom:100%;" />
 
      - 参数解读
 
@@ -1929,11 +1929,11 @@ draft: false
 
   2. 在application.yml中指定Sentinel相关信息
 
-     ![image-20260726132632113](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726132632113.png) 
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726132632113.png" alt="image-20260726132632113" style="zoom:100%;" /> 
 
   3. 配置主从的读写分离
 
-     ![image-20260726132746781](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726132746781.png)
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726132746781.png" alt="image-20260726132746781" style="zoom:100%;" />
 
 ---
 
@@ -1985,7 +1985,7 @@ draft: false
 
     - 5.0之后可以使用内置命令进行分片集群
 
-      ![image-20260726140440091](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726140440091.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726140440091.png" alt="image-20260726140440091" style="zoom:100%;" />
 
 - 散列插槽
 
@@ -1997,7 +1997,7 @@ draft: false
 
     而当有多个主结点时，则需要将插槽分配给各个主节点，计算出的hash值落在哪个主节点范围内，就去该主节点内查询
 
-    ![image-20260726141524358](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726141524358.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726141524358.png" alt="image-20260726141524358" style="zoom:100%;" />
 
    
 
@@ -2024,7 +2024,7 @@ draft: false
 
   - 添加一个结点到集群
 
-    ![image-20260726142900921](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726142900921.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260726142900921.png" alt="image-20260726142900921" style="zoom:100%;" />
 
     需要传入新增结点的端口和已存在结点的端口（用于通知有新结点的加入）
 
@@ -2064,7 +2064,7 @@ draft: false
 
 - 为请求处理的各个环节都加上缓存，减轻Tomcat的压力，提升服务性能
 
-  ![image-20260727100145496](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727100145496.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727100145496.png" alt="image-20260727100145496" style="zoom:100%;" />
 
   
 
@@ -2395,7 +2395,7 @@ Tip：Redis预热后，OpenResty就可以从Redis中读取数据存入NGINX缓�
 
 - 保存对象的三种方式
 
-  ![image-20260727151340765](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727151340765.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727151340765.png" alt="image-20260727151340765" style="zoom:100%;" />
 
   综上，hash为存储对象的最优方式
 
@@ -2411,7 +2411,7 @@ Tip：Redis预热后，OpenResty就可以从Redis中读取数据存入NGINX缓�
 
     将这个大哈希拆分成小哈希，将id/100作为key，id%100作为field，这样拆分成一万个小哈希，每个小哈希里面有100个field-value
 
-    ![image-20260727152312660](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727152312660.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727152312660.png" alt="image-20260727152312660" style="zoom:100%;" />
 
     
 
@@ -2431,7 +2431,7 @@ Tip：Redis预热后，OpenResty就可以从Redis中读取数据存入NGINX缓�
 
 - jedis中的类，用于向Redis中导入大量数据
 
-  ![image-20260727153757849](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727153757849.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727153757849.png" alt="image-20260727153757849" style="zoom:100%;" />
 
   上图张的 `pipeline.set` 还可以是  `pipeline.hset`  `pipeline.lpush` 等
 
@@ -2447,7 +2447,7 @@ Tip：Redis预热后，OpenResty就可以从Redis中读取数据存入NGINX缓�
 
 - 解决方法
 
-  ![image-20260727155457681](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727155457681.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727155457681.png" alt="image-20260727155457681" style="zoom:100%;" />
 
   Tip：法3就是多线程版的法2，开启线程池，一次同时发出m个请求
 
@@ -2488,7 +2488,7 @@ Tip：Redis预热后，OpenResty就可以从Redis中读取数据存入NGINX缓�
 
 - 在Redis执行时耗时超过某个阈值的**命令（包括查询和修改等）**，成为慢查询
 
-  ![image-20260727162628365](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727162628365.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727162628365.png" alt="image-20260727162628365" style="zoom:100%;" />
 
   由于Redis是单线程的，所以当同一时间有多个命令时，会将命令存入队列，当某个命令执行时间过长时，会导致队列中的命令由于等待时间过长而报错
 
@@ -2528,7 +2528,7 @@ Tip：Redis预热后，OpenResty就可以从Redis中读取数据存入NGINX缓�
 
 - Redis内存不足时，可能导致Key频繁被删除、响应时间变长、QPS不稳定等问题。当内存使用率达到90%以上时就需要注意并快速定位到内存占用原因
 
-  ![image-20260727164831569](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727164831569.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727164831569.png" alt="image-20260727164831569" style="zoom:100%;" />
 
 
 
@@ -2546,7 +2546,7 @@ Tip：Redis预热后，OpenResty就可以从Redis中读取数据存入NGINX缓�
 
   - 客户端缓冲区：分为输入缓冲区和输出缓冲区，输入缓冲区最大为1G且无法修改，输出缓冲区可以设置
 
-    ![image-20260727165911438](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727165911438.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/redis/image-20260727165911438.png" alt="image-20260727165911438" style="zoom:100%;" />
 
   可以使用clients list命令列出连接客户端信息进行判断到底是哪个客户端出现了问题
 

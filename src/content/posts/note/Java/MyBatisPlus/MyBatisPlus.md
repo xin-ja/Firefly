@@ -322,7 +322,7 @@ draft: false
 
   1. 下载插件（MyBatisPlus为例）
 
-     ![image-20260730155829643](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mybatis-plus/image-20260730155829643.png) 下载好后有这俩选项
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mybatis-plus/image-20260730155829643.png" alt="image-20260730155829643" style="zoom:100%;" /> 下载好后有这俩选项
 
   2. 先进行数据库的选择
 
@@ -418,7 +418,7 @@ draft: false
 
   2. 在**@TableName**的注解上加上**autoRedultMap=true**属性,开启自动的ResultMap映射
 
-     ![image-20260730165717608](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mybatis-plus/image-20260730165717608.png)
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mybatis-plus/image-20260730165717608.png" alt="image-20260730165717608" style="zoom:100%;" />
 
 ---
 

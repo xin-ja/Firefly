@@ -26,7 +26,7 @@ draft: false
 
 #### 网络、互联网、因特网的区别和关系
 
-> - 网络![image-20260420213537842](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420213537842.png)
+> - 网络<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420213537842.png" alt="image-20260420213537842" />
 >
 >   多个设备（结点）互联形成**网络**
 >
@@ -48,13 +48,13 @@ draft: false
 
 ##### 因特网发展的三个阶段
 
-> ![image-20260420214417170](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420214417170.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420214417170.png" alt="image-20260420214417170" />
 
 ##### 因特网服务提供者（Internet Service Provider **ISP**）
 
 > 普通用户需要通过ISP访问互联网，我国的ISP主要有移动、电信、联通 等
 >
-> - 因特网已经发展成为**基于ISP的多层次结构的互联网络**![image-20260420215231403](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420215231403.png)
+> - 因特网已经发展成为**基于ISP的多层次结构的互联网络**<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420215231403.png" alt="image-20260420215231403" style="zoom:100%;" />
 >
 > - 因特网标准化工作
 >
@@ -72,7 +72,7 @@ draft: false
 
 > 电路交换：拨号电话的通信方式
 >
-> - 示意图![image-20260420220327301](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420220327301.png)
+> - 示意图<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420220327301.png" alt="image-20260420220327301" style="zoom:100%;" />
 > - 过程
 >   1. 建立连接 （分配通信资源）
 >   2. 通信 （占用通信资源）
@@ -82,7 +82,7 @@ draft: false
 
 > 分组交换：当前计算机通信的方式
 >
-> - 示意图![image-20260420220927917](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420220927917.png)
+> - 示意图<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420220927917.png" alt="image-20260420220927917" style="zoom:100%;" />
 > - :star:过程
 >   1. 由于报文信息过长，**可能会引起缓存溢出的问题**，所以发送前发送方要对报文数据进行**预处理**，即：将**数据切割成等长小段**，并对每一段加上一个**首部**（首部存储了一些额外信息 如：发送目的地） <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420221221329.png" alt="image-20260420221221329" style="zoom:50%;" /> –>  —》   <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260420221240600.png" alt="image-20260420221240600" style="zoom:50%;" />
 >   2. 预处理（分组）完后，主机将数据发给路由器，路由器将数据**存储于缓存中**，并解析首部**查转发表**找到发送的目的主机
@@ -104,7 +104,7 @@ draft: false
 
 #### 三者对比
 
-> - 示意图![image-20260420222551057](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420222551057.png)
+> - 示意图<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420222551057.png" alt="image-20260420222551057" style="zoom:100%;" />
 > - 解析
 >   - 若要连续传送大量的数据，并且数据传送时间远大于建立连接的时间，则使用电路交换可以有较高的传输效率。然而**计算机的数据传送往往是突发式的，采用电路交换时通信线路的利用率会很低**。 
 >   -  报文交换和分组交换都**不需要建立连接**（即预先分配通信资源），在**传送计算机的突发数据时可以提高通信线路的利用率**。 
@@ -116,7 +116,7 @@ draft: false
 
 > 此处只对范围覆盖、拓扑结构进行分类
 >
-> - 覆盖范围分类![image-20260420223315356](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420223315356.png)
+> - 覆盖范围分类<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420223315356.png" alt="image-20260420223315356" style="zoom:100%;" />
 >
 >     - 广域网
 >
@@ -167,11 +167,11 @@ draft: false
 >
 >   - 常见数据率单位
 >
->        ![image-20260422151906329](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422151906329.png)
+>        <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422151906329.png" alt="image-20260422151906329" style="zoom:100%;" />
 >
 >     注意：与存储单位不同，数据传输速率以**1000**为进制，**而非1024**
 >     
->      ![image-20260422152034711](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422152034711.png) 此图为数据**存储单位**，以**1024**计
+>      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422152034711.png" alt="image-20260422152034711" style="zoom:100%;" /> 此图为数据**存储单位**，以**1024**计
 >     
 >   - 补充
 >   
@@ -181,11 +181,11 @@ draft: false
 >
 >   - 带宽在**模拟信号系统**中的意义
 >
->     信号所包含的不同**频率成分**所占据的**频率范围**![image-20260422153848633](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422153848633.png)
+>     信号所包含的不同**频率成分**所占据的**频率范围**<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422153848633.png" alt="image-20260422153848633" style="zoom:100%;" />
 >
 >   - 带宽在**计算机网络**中的意义
 >
->     用来表示网络的通信线路能传送数据的能力，为单位时间内网络中两点能通过的**最高数据量**![image-20260422154005464](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422154005464.png)
+>     用来表示网络的通信线路能传送数据的能力，为单位时间内网络中两点能通过的**最高数据量**<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422154005464.png" alt="image-20260422154005464" style="zoom:100%;" />
 
 #### 吞吐量
 
@@ -207,7 +207,7 @@ draft: false
 >
 >       tip：其中发送速率受 **网卡发送速率、信道带宽、接口速率** 三个因素共同影响。遵从**短板效应**
 >
->        ![image-20260422155016798](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422155016798.png)
+>        <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422155016798.png" alt="image-20260422155016798" style="zoom:100%;" />
 >
 >   - 传播时延
 >
@@ -217,7 +217,7 @@ draft: false
 >
 >       传播时延=**信道长度（m）/电磁波传播速率（m/s）**
 >
->       tip：不同的传播介质当中的电磁波速率不同 ![image-20260422155328570](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422155328570.png)
+>       tip：不同的传播介质当中的电磁波速率不同 <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422155328570.png" alt="image-20260422155328570" style="zoom:100%;" />
 >
 >   - 处理时延
 >
@@ -229,7 +229,7 @@ draft: false
 
 > - 原理
 >
->   - 示意图![image-20260422182211373](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422182211373.png)
+>   - 示意图<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422182211373.png" alt="image-20260422182211373" style="zoom:100%;" />
 >
 >   tip：**上图忽略了处理时延**
 >
@@ -254,7 +254,7 @@ draft: false
 >
 > - 习题2
 >
->   ​	![image-20260422191224652](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422191224652.png)
+>   ​	<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422191224652.png" alt="image-20260422191224652" style="zoom:100%;" />
 >
 >   报文传输：2*（8Mb/10Mbps）= 1.6s = 1600ms
 >
@@ -268,7 +268,7 @@ draft: false
 >
 >     而报文传输无法做到在第一部分链路传输过程中同步传输第二部分链路，需要等待整体传输完毕才可以传输第二部分链路，所以耗时约等于分组传输的两倍
 >
->   - 示意图![image-20260422191914287](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422191914287.png)
+>   - 示意图<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260422191914287.png" alt="image-20260422191914287" style="zoom:100%;" />
 
 #### 时延带宽积
 
@@ -528,9 +528,9 @@ draft: false
 >
 >     光纤通信利用光脉冲在光纤中的传递来进行通信，由于可见光频率很高（约10^8^MHz），因此**光纤传输带宽远大于其他传输方式**
 >
->     <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260423152846242.png" alt="image-20260423152846242" style="zoom:50%;" />![image-20260423153039415](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423153039415.png)
+>     <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260423152846242.png" alt="image-20260423152846242" style="zoom:50%;" /><img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423153039415.png" alt="image-20260423153039415" style="zoom:100%;" />
 >
->     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423153050595.png" alt="image-20260423153050595" style="zoom:50%;" />![image-20260423153237227](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423153237227.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423153050595.png" alt="image-20260423153050595" style="zoom:50%;" /><img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423153237227.png" alt="image-20260423153237227" style="zoom:100%;" />
 >
 >     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423153249098.png" alt="image-20260423153249098" style="zoom: 33%;" />
 >
@@ -693,7 +693,7 @@ draft: false
 >
 > - 习题2
 >
-> ![image-20260423164144444](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423164144444.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423164144444.png" alt="image-20260423164144444" style="zoom:100%;" />
 >
 > 差分曼切斯特编码只看每个码元**开始处（即虚线处）**  **有跳变为0  无为1**
 >
@@ -701,7 +701,7 @@ draft: false
 
 #### 基本的带通调制和混合调制方法
 
-> -  ![image-20260423164916652](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423164916652.png)
+> -  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423164916652.png" alt="image-20260423164916652" style="zoom:100%;" />
 >
 > - 基本带通调制方法
 >
@@ -770,7 +770,7 @@ draft: false
 
 > 由上述关系会抛出一个疑问 我们可以用调制技术增大一个码元存储的数据量，那只要我们调制的够多，岂不是可以无限提高信号传输速率（比特率）？
 >
-> ![image-20260423172758347](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423172758347.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423172758347.png" alt="image-20260423172758347" style="zoom:100%;" />
 >
 > - 由此引出了香农公式
 >
@@ -782,19 +782,19 @@ draft: false
 
 #### :star:信道极限习题
 
-> - 习题1![image-20260423173759592](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423173759592.png)
+> - 习题1<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423173759592.png" alt="image-20260423173759592" style="zoom:100%;" />
 >
 >   最高码元传输速率：2 * 3=6（码元/s）   一个码元可携带的比特： log~2~(4*4)=4   6 * 4=24  **B**
 >
-> - 习题2![image-20260423174313523](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423174313523.png)
+> - 习题2<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423174313523.png" alt="image-20260423174313523" style="zoom:100%;" />
 >
 >   一个码元可携带的比特： log~2~(4)=2		2400/2=1200    **B**
 >
-> - 习题3![image-20260423174531985](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423174531985.png)
+> - 习题3<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423174531985.png" alt="image-20260423174531985" style="zoom:100%;" />
 >
-> - 习题4![image-20260423174937650](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423174937650.png)
+> - 习题4<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423174937650.png" alt="image-20260423174937650" style="zoom:100%;" />
 >
-> - 习题5![image-20260423175024581](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423175024581.png)
+> - 习题5<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260423175024581.png" alt="image-20260423175024581" style="zoom:100%;" />
 >
 >   仿效上题 信噪比30db时： S/N=1000  C=W*log~2~（1001）≈ 10W
 >
@@ -969,7 +969,7 @@ draft: false
 >
 >        即：原始数据中**即出现了转义字符又出现了定界符**
 >
->         ![image-20260425144124136](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260425144124136.png)
+>         <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260425144124136.png" alt="image-20260425144124136" style="zoom:100%;" />
 >
 >        只需要**将转义字符再转义一次即可**
 >
@@ -981,7 +981,7 @@ draft: false
 
 ##### 封装成帧和透明传输例题
 
-> - 习题1![image-20260425150031887](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260425150031887.png)
+> - 习题1<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260425150031887.png" alt="image-20260425150031887" style="zoom:100%;" />
 >
 >   比特填充法：011111**0**00011111**0**10  标红的为填充的比特0    A
 >
@@ -1167,7 +1167,7 @@ draft: false
 >
 > - 示意图
 >
->   <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260426120316044.png" alt="image-20260426120316044" style="zoom: 50%;" />![image-20260426121522762](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426121522762.png)
+>   <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260426120316044.png" alt="image-20260426120316044" style="zoom: 50%;" /><img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426121522762.png" alt="image-20260426121522762" style="zoom:100%;" />
 >
 >   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426121522762.png" alt="image-20260426121522762" style="zoom:50%;" />
 >
@@ -1182,7 +1182,7 @@ draft: false
 >
 >     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426122241208.png" alt="image-20260426122241208" style="zoom: 33%;" />
 >
->     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426122307202.png" alt="image-20260426122307202" style="zoom: 33%;" />!
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426122307202.png" alt="image-20260426122307202" style="zoom: 33%;" />
 >
 >     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426122340329.png" alt="image-20260426122340329" style="zoom:33%;" />
 >
@@ -1538,7 +1538,7 @@ draft: false
 
 ##### CSMA CD例题
 
-> ![image-20260501105813015](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260501105813015.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260501105813015.png" alt="image-20260501105813015" style="zoom:100%;" />
 >
 > B    ACD都是物理层的[信道复用技术](#5.信道复用技术)
 
@@ -1573,7 +1573,7 @@ draft: false
 
  ###### 争用期习题
 
-> - 习题![image-20260501112638223](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260501112638223.png)
+> - 习题<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260501112638223.png" alt="image-20260501112638223" style="zoom:100%;" />
 >
 >   注意题目中是两台主机**均**检测到碰撞
 >
@@ -1865,15 +1865,15 @@ draft: false
 >
 >   综上选B
 >
-> - 习题2![image-20260501212948025](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260501212948025.png)
+> - 习题2<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260501212948025.png" alt="image-20260501212948025" style="zoom:100%;" />
 >
 >   PDU（**P**rotocol **D**ata **U**nit）的意思是**协议数据单元**，它是计算机网络体系结构中**对等实体间**逻辑通信的对象。
 >
 >   以太网交换机工作在数据链路层（包括物理层），它接收并转发的PDU通常称为**帧**。以太网交换机收到帧后，在转发表中查找帧的**目的MAC地址**所对应的接口号，然后通过该接口转发帧。  选A
 >
-> - 习题3![image-20260501213816293](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260501213816293.png)
+> - 习题3<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260501213816293.png" alt="image-20260501213816293" style="zoom:100%;" />
 >
->   ![image-20260501214901838](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260501214901838.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260501214901838.png" alt="image-20260501214901838" style="zoom:100%;" />
 >
 >   1. 直通交换接受完目的MAC地址就立马进行转发 
 >   2. 物理层会对MAC帧添加8Byte的前导码  [详见](#封装成帧) 但是题目不要求
@@ -2477,7 +2477,7 @@ draft: false
 >
 >   - 示意图
 >
->     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260503121747503.png" alt="image-20260503121747503" style="zoom:50%;" />![image-20260503121945910](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260503121945910.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260503121747503.png" alt="image-20260503121747503" style="zoom:50%;" /><img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260503121945910.png" alt="image-20260503121945910" style="zoom:100%;" />
 >
 >     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260503122121190.png" alt="image-20260503122121190" style="zoom:50%;" />
 >
@@ -3985,13 +3985,13 @@ draft: false
 >     
 >
 >     - 接收方不应过分推迟发送确认
->        
+>            
 >       ，否则会导致发送方不必要的超时重传，这反而浪费了网络的资源。
 >
 >       
 >
 >       TCP 标准规定，确认推迟的时间不应超过 0.5 秒。若收到一连串具有最大长度的报文段，则必须每隔一个报文段就发送一个确认 [RFC 1122]。
->        
+>            
 >     - 捎带确认实际上并不经常发生，因为大多数应用程序很少同时在两个方向上发送数据。
 >
 >     

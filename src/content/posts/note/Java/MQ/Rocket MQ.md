@@ -34,7 +34,7 @@ draft: false
 
        如：**秒杀**场景时，会**对数据库造成巨大的压力**，此时生产方可以将消息存入MQ（如存了10万条/秒），消费方再逐量从MQ中取（每秒取1万条）
 
-       ![image-20260728103735977](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260728103735977.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260728103735977.png" alt="image-20260728103735977" style="zoom:100%;" />
 
        
 
@@ -68,7 +68,7 @@ draft: false
 
 当三个角色都被部署成**集群**时，Producer在向Broker存消息前还需向**命名服务器集群**（存储着多个Broker的ip）发送消息以**获取Broker信息**  ；同理，Consumer也需从命名服务器获取Broker的ip
 
-![image-20260728115251445](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260728115251445.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260728115251445.png" alt="image-20260728115251445" style="zoom:100%;" />
 
 **命名服务器集群**：类似于大脑，各个机器都需在命名服务器上注册，并采用**心跳机制**定期向命名服务器集群发送消息，用以**监控健康状态**。类似于**Redis中的哨兵**
 
@@ -226,7 +226,7 @@ draft: false
   consumer.setMessageModel(MessageModel.BROADCASTING);//广播模式
   ```
 
-  ![image-20260728141557483](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260728141557483.png) 
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260728141557483.png" alt="image-20260728141557483" style="zoom:100%;" /> 
 
   如图：默认为clustering模式（集群，负载均衡），broadcast（广播模式）
 
@@ -704,7 +704,7 @@ draft: false
 
 - 工作流程
 
-  ![image-20260729105410706](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260729105410706.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260729105410706.png" alt="image-20260729105410706" style="zoom:100%;" />
 
 ---
 
@@ -814,7 +814,7 @@ draft: false
 
       注意：应用会出现消息消费被阻塞的情况，因此，要对顺序消息的消费情况进行监控，避免消息阻塞导致消息一直重发
 
-      ![image-20260729123727938](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260729123727938.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260729123727938.png" alt="image-20260729123727938" style="zoom:100%;" />
 
     - 无序消息
 
@@ -824,7 +824,7 @@ draft: false
 
       为保障无序消息的消费，MQ 设定了**合理的消息重试间隔时长**
 
-      ![image-20260729123921421](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260729123921421.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mq/image-20260729123921421.png" alt="image-20260729123921421" style="zoom:100%;" />
 
       默认尝试十六次，**每次的重试时间间隔都比前一次长 **若十六次都没成功，就不发送该消息
 

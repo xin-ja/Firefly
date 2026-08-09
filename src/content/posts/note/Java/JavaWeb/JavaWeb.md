@@ -46,7 +46,7 @@ draft: false
 
 - 简介
 
-  ![image-20260627153627906](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627153627906.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627153627906.png" alt="image-20260627153627906" style="zoom:100%;" />
 
 - 基本结构
 
@@ -92,7 +92,7 @@ draft: false
 
       
 
-      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627172919723.png" alt="image-20260627172919723" style="zoom:50%;" /> ![image-20260627172940080](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627172940080.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627172919723.png" alt="image-20260627172919723" style="zoom:50%;" /> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627172940080.png" alt="image-20260627172940080" style="zoom:100%;" />
       
        
       
@@ -100,15 +100,15 @@ draft: false
       
         1. <input>，可通过type属性控制输入形式
       
-           ![image-20260627173231447](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627173231447.png)
+           <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627173231447.png" alt="image-20260627173231447" style="zoom:100%;" />
       
         2. < select>,下拉表单
       
-           ![image-20260627173910476](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627173910476.png) 
+           <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627173910476.png" alt="image-20260627173910476" style="zoom:100%;" /> 
       
         3. < textarea>,自由文本域
         
-           ![image-20260627175328670](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627175328670.png) 
+           <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627175328670.png" alt="image-20260627175328670" style="zoom:100%;" /> 
       
       
 
@@ -296,7 +296,7 @@ draft: false
 
 - 快速入门
 
-  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627190421999.png" alt="image-20260627190421999" style="zoom:50%;" />   ![image-20260627190911141](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627190911141.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627190421999.png" alt="image-20260627190421999" style="zoom:50%;" />   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627190911141.png" alt="image-20260627190911141" style="zoom:100%;" />
 
   创建出来的vue对象通过el:“#app”绑定了id=“app”的div板块，使得div中展示的数据和vue中的是同一份，从而实现了数据的双向绑定
 
@@ -322,7 +322,7 @@ draft: false
 
   Asynchronous JavaScript And XML   异步的JavaScript和XML。用于数据的交换和异步交互
 
-  ![image-20260627193041731](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627193041731.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627193041731.png" alt="image-20260627193041731" style="zoom:100%;" />
 
   - 同步和异步
 
@@ -360,7 +360,7 @@ draft: false
 
   - 流程
 
-    ![image-20260627200333166](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627200333166.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627200333166.png" alt="image-20260627200333166" style="zoom:100%;" />
 
 - YAPI：高效、易用、功能强大的api管理平台 — 可以生成一个假的接口供前端测试
 
@@ -384,7 +384,7 @@ draft: false
 
   - vue组件
 
-    ![image-20260627204337664](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627204337664.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260627204337664.png" alt="image-20260627204337664" style="zoom:100%;" />
 
 ---
 
@@ -596,7 +596,7 @@ draft: false
 
   2. 定义HelloController类，添加hello方法
 
-     ![image-20260628141707685](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628141707685.png) 
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628141707685.png" alt="image-20260628141707685" style="zoom:100%;" /> 
 
      hellocontroller放在controller包下
 
@@ -643,7 +643,7 @@ draft: false
 
   - 示意图
 
-    ![image-20260628143651327](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628143651327.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628143651327.png" alt="image-20260628143651327" style="zoom:100%;" />
 
   由上图可见，HTTP请求协议可以分为三个部分
 
@@ -727,7 +727,7 @@ draft: false
 
       - SpringBoot的起步依赖
 
-        ![image-20260628152157016](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628152157016.png)
+        <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628152157016.png" alt="image-20260628152157016" style="zoom:100%;" />
 
         利用Maven的依赖传递，把某项开发所需要的依赖封装在一个起步依赖里
 
@@ -782,7 +782,7 @@ draft: false
 
     - 若方法形参名和请求参数名不一致，会输出null。可以用@RequestParam完成映射
 
-      ![image-20260628162852287](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628162852287.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628162852287.png" alt="image-20260628162852287" style="zoom:100%;" />
 
       @RequestParam（name=“name”）中，表示将“name”这个字符串存入name变量中，再把name变量映射到username上，如此一来，前端传递的name=“xxx”会到name变量中，再通过name变量映射给username，tip：name=“xxx”  value=“xxx”用法一样
 
@@ -830,11 +830,11 @@ draft: false
 
   - 通过请求URL直接传递参数，使用{…}来标识路径参数，需要使用@PathVariable获取路径参数
 
-    ![image-20260628170633741](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628170633741.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628170633741.png" alt="image-20260628170633741" style="zoom:100%;" />
 
     如上图，在定义Mapping的时候用{id}来表示可能传递的值，后在形参列表通过@PathVariable将获取到的id传递给形参id
 
-    ![image-20260628170859176](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628170859176.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628170859176.png" alt="image-20260628170859176" style="zoom:100%;" />
 
     同理可以定义多个路径参数
   
@@ -911,7 +911,7 @@ draft: false
 
   正确的实现思路应该是创建一个**容器，**将**service**层中的**实现类放入容器**中，在**controller**层直接去**容器里面寻找对应的对象**  上述两个过程分别需要**控制反转（IOC）**和**依赖注入（DI）**两个技术
 
-  ![image-20260628190348386](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628190348386.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260628190348386.png" alt="image-20260628190348386" style="zoom:100%;" />
 
   
 
@@ -1143,7 +1143,7 @@ DAO层框架，用于**简化JDBC开发**
 
     3. 配置文件中开启Mybatis驼峰命名自动映射开关
 
-       ![image-20260629120133088](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260629120133088.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260629120133088.png" alt="image-20260629120133088" style="zoom:100%;" />
 
 #### XML映射文件
 
@@ -1215,7 +1215,7 @@ DAO层框架，用于**简化JDBC开发**
 
       2. 使用<include>标签引用
 
-         ![image-20260629135815041](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260629135815041.png) 
+         <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260629135815041.png" alt="image-20260629135815041" style="zoom:100%;" /> 
 
 ---
 
@@ -1233,13 +1233,13 @@ DAO层框架，用于**简化JDBC开发**
 
   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701180939070.png" alt="image-20260701180939070" style="zoom:50%;" />
 
-  ![image-20260701181042354](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701181042354.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701181042354.png" alt="image-20260701181042354" style="zoom:100%;" />
 
   动态代理一个模板，通过模板+指定方法就可以统计方法运行时长
 
 - SpringAOP
 
-  ![image-20260701181219086](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701181219086.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701181219086.png" alt="image-20260701181219086" style="zoom:100%;" />
 
   - 快速入门
 
@@ -1249,15 +1249,15 @@ DAO层框架，用于**简化JDBC开发**
 
     2. 编写AOP程序：针对特定方法编程
 
-       ![image-20260701182849592](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701182849592.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701182849592.png" alt="image-20260701182849592" style="zoom:100%;" />
 
        如此一来，在运行Around指定范围内的方法时都会自动加上这一段AOP程序。
 
 - 使用情形及优势
 
-  ![image-20260701183016474](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701183016474.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701183016474.png" alt="image-20260701183016474" style="zoom:100%;" />
 
-  ![image-20260701183114989](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701183114989.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701183114989.png" alt="image-20260701183114989" style="zoom:100%;" />
 
 #### AOP核心概念
 
@@ -1271,7 +1271,7 @@ DAO层框架，用于**简化JDBC开发**
 
 5. 目标对象：Target：通知所应用的对象
 
-![image-20260701183844691](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701183844691.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701183844691.png" alt="image-20260701183844691" style="zoom:100%;" />
 
 JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的方法
 
@@ -1279,7 +1279,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
 #### AOP执行流程
 
-![image-20260701184047055](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701184047055.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701184047055.png" alt="image-20260701184047055" style="zoom:100%;" />
 
 实际上就是注入时注入代理对象，而非原始的目标对象
 
@@ -1302,7 +1302,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
    tip：切入点表达式的抽取
 
-   ![image-20260701185733304](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701185733304.png)
+   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701185733304.png" alt="image-20260701185733304" style="zoom:100%;" />
 
 2. 通知顺序
 
@@ -1337,7 +1337,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
         - 书写建议
 
-          ![image-20260701192601316](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701192601316.png)
+          <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701192601316.png" alt="image-20260701192601316" style="zoom:100%;" />
 
         
 
@@ -1355,7 +1355,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
    - 注意
 
-     ![image-20260701193143777](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701193143777.png)
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260701193143777.png" alt="image-20260701193143777" style="zoom:100%;" />
 
 ---
 
@@ -1375,7 +1375,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
   - 除了支持配置文件属性配置，还支持**Java系统属性**和**命令行参数**的方法进行配置
 
-    ![image-20260702201651233](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702201651233.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702201651233.png" alt="image-20260702201651233" style="zoom:100%;" />
 
     优先级：命令行参数>Java系统属性>三大配置文件
 
@@ -1385,7 +1385,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
   SpringBoot启动时会将Bean放在IOC容器中，除了@Autowired自动注入，还可通过以下方式获取Bean
 
-  ![image-20260702202223421](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702202223421.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702202223421.png" alt="image-20260702202223421" style="zoom:100%;" />
 
   tip:以上方法都是IOC容器对象的方法
 
@@ -1397,7 +1397,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
 - Bean的作用域
 
-  ![image-20260702204319580](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702204319580.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702204319580.png" alt="image-20260702204319580" style="zoom:100%;" />
 
   重点了解前两个，由于**默认情况下为singleton作用域**，所以默认情况下，IOC容器中只会有一个同名Bean，所以Bean的获取中三种方法获取出来的是同一个对象
 
@@ -1409,7 +1409,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702205135665.png" alt="image-20260702205135665" style="zoom:33%;" /> 
 
-    ![image-20260702205238196](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702205238196.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702205238196.png" alt="image-20260702205238196" style="zoom:100%;" />
 
  
 
@@ -1432,7 +1432,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
        }
        ```
 
-       ![image-20260702210522439](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702210522439.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702210522439.png" alt="image-20260702210522439" style="zoom:100%;" />
 
     3. 第三方Bean的名称
 
@@ -1444,7 +1444,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
     4. **如果第三方bean需要依赖其它bean对象，直接在bean定义方法中设置形参即可，容器会根据类型自动装配。**
 
-       ![image-20260702211111657](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702211111657.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702211111657.png" alt="image-20260702211111657" style="zoom:100%;" />
 
        
 
@@ -1470,7 +1470,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
     - @Import
 
-      ![image-20260702213734494](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702213734494.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702213734494.png" alt="image-20260702213734494" style="zoom:100%;" />
       
       :star2::star2::star2::star2::star2::star2::star2::star2::star2::star2::star2::star2::star2::star2::star2:
 
@@ -1488,9 +1488,9 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702215254182.png" alt="image-20260702215254182" style="zoom:50%;" /> 
 
-    ![image-20260702215347344](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702215347344.png) 
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702215347344.png" alt="image-20260702215347344" style="zoom:100%;" /> 
 
-    ![image-20260702215559142](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702215559142.png) 
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702215559142.png" alt="image-20260702215559142" style="zoom:100%;" /> 
 
    
 
@@ -1498,11 +1498,11 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
   简而言之，在原生Spring中引入依赖的注解需要通过@Import或者@Configuration+@Bean方式手动导入，而在SpringBoot中的starter依赖中，对所有需要导入的Bean都进行了以上处理    —  具体实现：将**所有Bean的配置类全类名**放入一个配置文件中，**（每个Bean配置类内都实现了@Configuration+@Bean）**，只需要直接**@Import这个配置文件中的所有配置类即可**
 
-  ![image-20260702222253449](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702222253449.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702222253449.png" alt="image-20260702222253449" style="zoom:100%;" />
 
 - 条件装配
 
-  ![image-20260702222329873](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702222329873.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702222329873.png" alt="image-20260702222329873" style="zoom:100%;" />
 
   自动配置时在IOC中一键导入所有的Bean是不现实的，Bean太多了。所以会使用**条件装配@ConditionalOnxxx** ，限制在某条件满足时才会在IOC中创建这个Bean
 
@@ -1512,13 +1512,13 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
   - @ConditionalOnClass
 
-    ![image-20260702222843995](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702222843995.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702222843995.png" alt="image-20260702222843995" style="zoom:100%;" />
 
     此处的当前环境指的是整个项目，只要项目中有指定类的class文件，条件就成立
 
   - @ConditionalOnMissingBean
 
-    ![image-20260702223106828](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702223106828.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702223106828.png" alt="image-20260702223106828" style="zoom:100%;" />
 
     判断IOC容器中是否存在该Bean，
 
@@ -1526,7 +1526,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
   - @ConditionalProperty
 
-    ![image-20260702223344877](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702223344877.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702223344877.png" alt="image-20260702223344877" style="zoom:100%;" />
 
     判断配置文件中是否有我们指定的键值对，若有则创建Bean放入IOC
 
@@ -1540,13 +1540,13 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
 - 实现
 
-  ![image-20260702225106132](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702225106132.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702225106132.png" alt="image-20260702225106132" style="zoom:100%;" />
 
   1. 创建aliyun-oss-spring-boot-starter模块
 
      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702230017362.png" alt="image-20260702230017362" style="zoom: 33%;" /> 
 
-     ![image-20260702230027756](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702230027756.png) 把其他都删掉
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702230027756.png" alt="image-20260702230027756" style="zoom:100%;" /> 把其他都删掉
 
   
 
@@ -1556,7 +1556,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702230630901.png" alt="image-20260702230630901" style="zoom:50%;" /> src别删，要配置
 
-     ![image-20260702230716928](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702230716928.png)引入
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260702230716928.png" alt="image-20260702230716928" style="zoom:100%;" />引入
 
   
 
@@ -1606,7 +1606,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
   tip：创建maven模块时，父工程打包方式要设置为pom（默认为jar）
 
-  ![image-20260703105640569](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260703105640569.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260703105640569.png" alt="image-20260703105640569" style="zoom:100%;" />
 
   <packaging>pom<packaging>
 
@@ -1622,7 +1622,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
   - 注意：配置父工程时还需在子工程中用<relativePath>标签指定父工程的pom.xml配置文件，若不指定则会从本地仓库/远程仓库查找该工程
 
-    ![image-20260703110543636](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260703110543636.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260703110543636.png" alt="image-20260703110543636" style="zoom:100%;" />
 
 - 版本锁定
 
@@ -1640,7 +1640,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
   除此之外，在父工程中还可以使用自定义属性（<properties>）+引用属性（${属性名}）对各依赖的版本进行集中管理
 
-  ![image-20260703113214999](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260703113214999.png)
+  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260703113214999.png" alt="image-20260703113214999" style="zoom:100%;" />
 
 - 聚合
 
@@ -1656,7 +1656,7 @@ JoinPoint即所有可以被AOP控制的方法，PointCut即实际被AOP控制的
 
   - 实现：在聚合工程中通过<modules>标签设置当前聚合工程所包含的子模块名称
 
-    ![image-20260703113955802](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260703113955802.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javaweb/image-20260703113955802.png" alt="image-20260703113955802" style="zoom:100%;" />
 
     ../表示上一级目录
 

@@ -202,13 +202,13 @@ draft: false
     
        在Java运行直接对SQL语法进行预编译，**省去了MySQL检查语法与编译SQL 的时间**
     
-    ![image-20260627112458735](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/jdbc/image-20260627112458735.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/jdbc/image-20260627112458735.png" alt="image-20260627112458735" style="zoom:100%;" />
   
    
   
   - 预编译功能的开启
   
-    ![image-20260627112537920](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/jdbc/image-20260627112537920.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/jdbc/image-20260627112537920.png" alt="image-20260627112537920" style="zoom:100%;" />
   
     tip：第二步用于开启慢查询日志，用于演示预编译功能
   

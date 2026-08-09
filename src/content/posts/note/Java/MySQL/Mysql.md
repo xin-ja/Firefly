@@ -28,7 +28,7 @@ draft: false
 
 > 数据库（DataBase）即存放数据的仓库 ，数据库管理系统（DataBase Management System）是一种管理数据库的大型软件（==MySQL、Oracle等==） SQL语言是用于操作==关系型数据库==的编程语言。 
 >
-> ![image-20260311154639782](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260311154639782.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260311154639782.png" alt="image-20260311154639782" style="zoom:100%;" />
 
 ### 2.关系型数据库和非关系型数据库（离散数据库）
 
@@ -460,15 +460,15 @@ DELETE FROM 表名 [WHERE 条件] #如果没有WHERE会删除整张表的数据
 
     - 样例
 
-        ![image-20260316200821027](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260316200821027.png)
+        <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260316200821027.png" alt="image-20260316200821027" style="zoom:100%;" />
 
        //上图为根据性别分组，并展示各个性别的人数以及其年龄平均数
 
-         ![image-20260316201051602](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260316201051602.png)
+         <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260316201051602.png" alt="image-20260316201051602" style="zoom:100%;" />
 
       //在原先基础上再用HAVING进行筛选，把平均年龄>=27的那个组筛选出来
 
-       ![image-20260316201323197](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260316201323197.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260316201323197.png" alt="image-20260316201323197" style="zoom:100%;" />
 
       //在原先基础上先用WHERE筛选掉年龄<=19的用户，再进行分组求个数、平均数以及HAVING筛选
 
@@ -514,7 +514,7 @@ DELETE FROM 表名 [WHERE 条件] #如果没有WHERE会删除整张表的数据
 
 ###### 执行顺序
 
-![image-20260316205732246](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260316205732246.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260316205732246.png" alt="image-20260316205732246" style="zoom:100%;" />
 
 > 执行顺序：^1^先找到表、^2^再对表进行筛选、分组（WHERE、GROUP BY、HAVING）^3^分组筛选后再查询要展示的字段列表 ^4^查找到要展示的字段列表后再进行排序（ORDER BY、LIMIT） ^5^排序后展示
 
@@ -673,7 +673,7 @@ DELETE FROM 表名 [WHERE 条件] #如果没有WHERE会删除整张表的数据
 >
 > [^date_add]: DATE_ADD函数中的 ***INTERVAL不可以省略** , **expr为一个间隔数值** ，**type为DAY，MONTH或YEAR***
 >
-> DATE_ADD样例:   ![image-20260318193630562](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260318193630562.png)
+> DATE_ADD样例:   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260318193630562.png" alt="image-20260318193630562" style="zoom:100%;" />
 >
 > [^datediff]:DATEDIFF函数的***返回值是date1-date2***
 
@@ -781,14 +781,14 @@ DELETE FROM 表名 [WHERE 条件] #如果没有WHERE会删除整张表的数据
 
 3. 示意
 
-      ![image-20260320153159514](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260320153159514.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260320153159514.png" alt="image-20260320153159514" style="zoom:100%;" />
 
    > 1. ALTER TABLE确定要操作的表
    > 2. ADD操作添加外键    CONSTRAINT 为添加的外键自定义名称为fk_emp_dept_id
    > 3. FOREIGN KEY(dept_id) 表明外键创建在 dept_id上
    > 4. REFRENCES dept(id)   表明外键指向dept表中的id字段 
 
-     ![image-20260320153511200](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260320153511200.png)    ![image-20260320153647978](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260320153647978.png)<img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260321123000615.png" alt="image-20260321123000615" style="zoom: 50%;" />        
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260320153511200.png" alt="image-20260320153511200" style="zoom:100%;" />    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260320153647978.png" alt="image-20260320153647978" style="zoom:100%;" /><img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260321123000615.png" alt="image-20260321123000615" style="zoom: 50%;" />        
 
    > dept_id上的蓝色小钥匙就代表有外键  id上的黄色小钥匙代表此字段是该表的主键[^补充]
    >
@@ -897,7 +897,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
   - 可视化演示
 
-       ![image-20260321120330001](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321120330001.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321120330001.png" alt="image-20260321120330001" style="zoom:100%;" />
 
 #### 一对一
 
@@ -912,9 +912,9 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 >
 > 如下表所示，我们只需要为**userid字段加上UNIQUE约束**，用以**保证一个userid字段只对应着一个父表主键id字段**，就可以实现一对一的关联
 >
-> ![image-20260321121110344](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321121110344.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321121110344.png" alt="image-20260321121110344" style="zoom:100%;" />
 >
-> ![image-20260321121550231](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321121550231.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321121550231.png" alt="image-20260321121550231" style="zoom:100%;" />
 
 - 一对一样例
 
@@ -971,7 +971,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
 - 笛卡尔积示例
 
-      ![image-20260321124147847](../../../AppData/Roaming/Typora/typora-user-images/image-20260321124147847.png)
+      <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260321124147847.png" alt="image-20260321124147847" style="zoom:100%;" />
 
   > 如图所示有多处重复，无法精准定位每个人所属部门
 
@@ -983,7 +983,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
   SELECT 字段列表 FROM 表1,表2 WHERE 表1.外键字段名=表2.外键所指字段名
   ```
 
-     ![image-20260321130326830](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321130326830.png)
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321130326830.png" alt="image-20260321130326830" style="zoom:100%;" />
 
 #### 多表查询分类
 
@@ -1112,9 +1112,9 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
   - 示例
 
-    ​    ![image-20260321204855996](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321204855996.png)
+    ​    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321204855996.png" alt="image-20260321204855996" style="zoom:100%;" />
 
-       ![image-20260321205208435](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321205208435.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321205208435.png" alt="image-20260321205208435" style="zoom:100%;" />
 
 - 列子查询
 
@@ -1146,7 +1146,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
   - 示例
 
-    ​    ![image-20260321211917782](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321211917782.png)
+    ​    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321211917782.png" alt="image-20260321211917782" style="zoom:100%;" />
 
     > :star:注意:star:：可以使用（字段1,字段2,…）来表示一行的数据  行与行的数据可以用=来判断是否完全相同
 
@@ -1156,11 +1156,11 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
   - 示例
 
-       ![image-20260321212540224](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321212540224.png)
+       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321212540224.png" alt="image-20260321212540224" style="zoom:100%;" />
 
-      ![image-20260321213027772](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321213027772.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321213027772.png" alt="image-20260321213027772" style="zoom:100%;" />
 
-      ![image-20260321213211178](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321213211178.png)
+      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260321213211178.png" alt="image-20260321213211178" style="zoom:100%;" />
 
 ---
 
@@ -1176,7 +1176,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
   这三步操作为一个整体，当其中一个环节出现问题后所有操作都会失败
 
-   ![image-20260322145721659](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260322145721659.png) 
+   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260322145721659.png" alt="image-20260322145721659" style="zoom:100%;" /> 
 
   如上图所示，若在张三账户余额-1000后异常导致转账无法完成应当回滚事务加回张三账户的1000元
 
@@ -1313,7 +1313,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
 #### 示意图
 
-![image-20260325141254135](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325141254135.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325141254135.png" alt="image-20260325141254135" style="zoom:100%;" />
 
 #### 说明
 
@@ -1396,7 +1396,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
 - 示意图
 
-    ![image-20260325145124260](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325145124260.png)
+    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325145124260.png" alt="image-20260325145124260" style="zoom:100%;" />
 
 - 补充说明
 
@@ -1425,7 +1425,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
   >
   > xxx.MYI：存储索引
   >
-  > ![image-20260325150025160](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325150025160.png)
+  > <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325150025160.png" alt="image-20260325150025160" style="zoom:100%;" />
 
 #### MEMORY
 
@@ -1447,13 +1447,13 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
   >
   > tip：MEMORY的数据和索引都直接存放在内存里，而不是磁盘里
   >
-  > ![image-20260325150619285](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325150619285.png)
+  > <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325150619285.png" alt="image-20260325150619285" style="zoom:100%;" />
 
 ### 5.（附表）三种存储引擎的对比及选择
 
 #### 三种引擎的对比
 
-![image-20260325150815990](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325150815990.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325150815990.png" alt="image-20260325150815990" style="zoom:100%;" />
 
 > 重点在于InnoDB和MyISAM的区别
 
@@ -1518,7 +1518,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 >
 - :star:解决方法： B树（多路平衡查找树）。
 
-  > ![image-20260326145843472](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260326145843472.png)
+  > <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260326145843472.png" alt="image-20260326145843472" style="zoom:100%;" />
   >
   > :star2:**B树在插入数据时，当一个结点没有可存放的空间了，该结点最中间的那个数据会向上分裂变成其左右部分的父结点,在成为父结点后其在子结点中会被删除，不再出现**
 
@@ -1529,7 +1529,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
   > **B+树是B树的变种**
   >
-  > ![image-20260326151101053](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260326151101053.png)
+  > <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260326151101053.png" alt="image-20260326151101053" style="zoom:100%;" />
   >
   > :star2: 不同于B树
   >
@@ -1544,7 +1544,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
   > MySQL中对经典的B+树进行了优化，将叶子结点中的单链表改为了双向循环链表，**便于范围搜索和排序**
   >
-  > ![image-20260326153204740](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260326153204740.png)
+  > <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260326153204740.png" alt="image-20260326153204740" style="zoom:100%;" />
   >
   > tip：MySQL中的B+树的结点均存放于 页/块 中  [详见](#InnoDB的逻辑存储结构)
 
@@ -1631,7 +1631,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
 
   - :star2:示意图:star2:
 
-     ![image-20260326163921627](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260326163921627.png)
+     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260326163921627.png" alt="image-20260326163921627" style="zoom:100%;" />
 
     > 此处id是主键，为聚合索引，其叶子结点存放着整行的数据
     >
@@ -1664,7 +1664,7 @@ ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
   SHOW INDEX FROM 表名;
   ```
 
-   ![image-20260328115405108](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260328115405108.png)
+   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260328115405108.png" alt="image-20260328115405108" style="zoom:100%;" />
 
   > 可见主键被自动设置为了聚集索引，索引类型是BTREE（实则是b+树，但b+树也是b树的一种）
 
@@ -1696,7 +1696,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > 2. 慢查询日志默认没有开启，在linux中可以通过修改/etc/mysql/mysql.conf.d/mysqld.cnf（Ubuntu的文件位置）配置文件开启该日志
 >
->      ![image-20260328123154504](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260328123154504.png)
+>      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260328123154504.png" alt="image-20260328123154504" style="zoom:100%;" />
 >
 >    开启后的日志位置：var/log/mysql/mysql-slow.log(Ubuntu)
 
@@ -1748,7 +1748,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
   EXPLAIN/DESC SELECT ...;
   ```
 
-   ![image-20260328134809915](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260328134809915.png)
+   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260328134809915.png" alt="image-20260328134809915" style="zoom:100%;" />
 
   > **Id**
   >
@@ -1890,7 +1890,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > - 示意
 >
->     ![image-20260329123350325](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329123350325.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329123350325.png" alt="image-20260329123350325" style="zoom:100%;" />
 >
 >   上图中的id是主键索引，而age是联合索引其最左索引是profession所以age索引失效，而两者又是用or连接的索引整条索引失效。
 >
@@ -1906,7 +1906,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > - 示例
 >
->     ![image-20260329124306612](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329124306612.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329124306612.png" alt="image-20260329124306612" style="zoom:100%;" />
 >
 >   上图示例数据量较小，且所有数据都要>=‘17799990000’ 所以第二句走的是全表扫描
 
@@ -1918,7 +1918,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 > - 示意
 >
->    ![image-20260329125500444](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329125500444.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329125500444.png" alt="image-20260329125500444" style="zoom:100%;" />
 >
 >   从上表可见，profession有两个索引（一个为联合索引，一个为单列索引），最终MySQL自动选择了联合索引作为查询过程中使用的索引
 >
@@ -1968,9 +1968,9 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   CREATE INDEX idx_xxx ON 表名(字段名(n));#n即为前缀长度
 >   ```
 >
->   -  ![image-20260329134821429](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329134821429.png)
+>   -  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329134821429.png" alt="image-20260329134821429" style="zoom:100%;" />
 >
->      ![image-20260329135154556](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329135154556.png)
+>      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329135154556.png" alt="image-20260329135154556" style="zoom:100%;" />
 >
 >     > :star2:上面这个查询案例的email是有重复的，当用idx_user_eamil_5索引查询时会查询到两个结果，查询到两个结果后再回表查询找到唯一符合的那一个
 >
@@ -2019,7 +2019,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   创建联合索引之后MySQL仍是选择phone的单列索引，所以我们可以用[SQL提示](#SQL提示)优化选择如下图
 >
->    ![image-20260329141013774](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329141013774.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260329141013774.png" alt="image-20260329141013774" style="zoom:100%;" />
 >
 > - 联合索引示意图
 >
@@ -2073,7 +2073,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 > 如果一次性需要插入极大批量的数据，使用insert语句的性能较低，此时可以使用**MySQL数据库提供的load指令**进行插入 （如：100w行数据 insert要10m load要16s）
 >
-> ![image-20260330204955366](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330204955366.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330204955366.png" alt="image-20260330204955366" style="zoom:100%;" />
 >
 > 本地文件的数据用符号（， ：等都行）分割开，与表头一一对应，即可用load读取到表中
 >
@@ -2085,7 +2085,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >      mysql --local-infile -u root -p 
 >      ```
 >
->       ![image-20260330210140831](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330210140831.png)
+>       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330210140831.png" alt="image-20260330210140831" style="zoom:100%;" />
 >
 >   2. 设置全局参数local_infile=1
 >
@@ -2107,7 +2107,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 > InnoDB存储引擎中，表数据是根据**主键顺序组织存放的**，这种存储方式被称为**索引组织表**（index organized table **IOT**）
 >
-> ![image-20260330212032915](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330212032915.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330212032915.png" alt="image-20260330212032915" style="zoom:100%;" />
 >
 > 主键顺序存放就是叶子节点（存放行数据） 是根据主键顺序排好的
 
@@ -2117,19 +2117,19 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > 2. 在InnoDB中 页可以为空，若页不为空，那么页会包含**2-N**行的数据**（充分利用空间，增快IO速度）**，根据主键排列  
 >
-> 3.  根据前面两条，由于页中的数据是根据主键排列的，**所以当主键顺序插入时正好顺着主键由小到大插入进去。**（图1）    **而当乱序插入时，页中的数据需要调整结构状态再进行插入（该现象就被称为:star:页分裂:star:），所以乱序插入会浪费更多的时间，效率更低** （图2、3）![image-20260330212754499](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330212754499.png)
+> 3.  根据前面两条，由于页中的数据是根据主键排列的，**所以当主键顺序插入时正好顺着主键由小到大插入进去。**（图1）    **而当乱序插入时，页中的数据需要调整结构状态再进行插入（该现象就被称为:star:页分裂:star:），所以乱序插入会浪费更多的时间，效率更低** （图2、3）<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330212754499.png" alt="image-20260330212754499" style="zoom:100%;" />
 >
 >      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330213140448.png" alt="image-20260330213140448" style="zoom: 67%;" />
 >
->      ![image-20260330213220030](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330213220030.png)
+>      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330213220030.png" alt="image-20260330213220030" style="zoom:100%;" />
 
 #### 页合并
 
 > 当删除一行记录时，**实际上记录并没有被物理删除**，只是被标记为删除并允许该空间允许被其他数据锁覆盖。  **当删除的记录达到了MERGE_THRESHOLD（默认为页的50%），InnoDB会开始寻找相邻的页并尝试合并页，以达到优化空间的效果**
 >
-> ![image-20260330213644435](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330213644435.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330213644435.png" alt="image-20260330213644435" style="zoom:100%;" />
 >
-> ![image-20260330213707716](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330213707716.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260330213707716.png" alt="image-20260330213707716" style="zoom:100%;" />
 >
 > tip：merge_threshold参数是可以更改的
 
@@ -2157,21 +2157,21 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 > <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401181612922.png" alt="image-20260401181612922" style="zoom:50%;" /> 
 >
-> ![image-20260401181743998](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401181743998.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401181743998.png" alt="image-20260401181743998" style="zoom:100%;" />
 >
 > 由图一可知，**表中并没有age和phone的索引，所以此处采用filesort的排序方式**
 >
-> ![image-20260401181910291](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401181910291.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401181910291.png" alt="image-20260401181910291" style="zoom:100%;" />
 >
 > 当创建了age和phone的**联合索引**后，就采用**using_index的排序方式，效率高**
 >
-> ![image-20260401182241135](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401182241135.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401182241135.png" alt="image-20260401182241135" style="zoom:100%;" />
 >
 > 由于联合索引建立时**age为最左的索引**，**此处使用phone违背了最左前缀法则，所以会出现using filesort**
 >
-> ![image-20260401182622708](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401182622708.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401182622708.png" alt="image-20260401182622708" style="zoom:100%;" />
 >
-> ![image-20260401182637120](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401182637120.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401182637120.png" alt="image-20260401182637120" style="zoom:100%;" />
 >
 > :star:上面两图对比可得出：若**age和phone的排序方式不同**也会用到using filesort
 >
@@ -2179,13 +2179,13 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > :star2:结论：当联合索引order by后的排序方式和创建索引时排序方式**全部相同或全部相反时**直接扫一遍索引即可，若**部分不同**则会出现filesort
 >
-> ![image-20260401182846239](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401182846239.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401182846239.png" alt="image-20260401182846239" style="zoom:100%;" />
 >
 > > 创建时指定 升/降序
 > >
-> > ![image-20260401183732661](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401183732661.png)
+> > <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401183732661.png" alt="image-20260401183732661" style="zoom:100%;" />
 > >
-> > ![image-20260401183748429](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401183748429.png)
+> > <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401183748429.png" alt="image-20260401183748429" style="zoom:100%;" />
 >
 > 
 >
@@ -2209,25 +2209,25 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 #### 优化情况
 
-> ![image-20260401185218393](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401185218393.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401185218393.png" alt="image-20260401185218393" style="zoom:100%;" />
 >
 > 在没有索引时使用group by 会有**using temporary**（使用临时表） 效率低
 >
-> ![image-20260401185423582](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401185423582.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401185423582.png" alt="image-20260401185423582" style="zoom:100%;" />
 >
 > 创建联合索引后会**using index**
 >
 > :star:原因：索引的叶子节点数据本就排好序，已经相当于分好组了（相同组的都排在一起），**如果没有索引就需要全表扫描去分组**
 >
-> ![image-20260401185722916](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401185722916.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401185722916.png" alt="image-20260401185722916" style="zoom:100%;" />
 >
-> ![image-20260401185808734](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401185808734.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401185808734.png" alt="image-20260401185808734" style="zoom:100%;" />
 >
 > 同样需要满足**最左前缀法则**
 >
 > tip：在group by之前的where处出现profession也同样满足最左前缀法则
 >
-> ![image-20260401190049210](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401190049210.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260401190049210.png" alt="image-20260401190049210" style="zoom:100%;" />
 >
 > :star:原因：where中出现**最左前缀并筛选后的结果仍是有序的** 既然有序那就是分好组的
 
@@ -2350,7 +2350,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 ##### 例子
 
-> ![image-20260403191617986](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260403191617986.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260403191617986.png" alt="image-20260403191617986" style="zoom:100%;" />
 >
 > **如上图，由于视图只是select的一个别名，所以该视图只会显示id<=10的数据，当我们向视图中插入id为20的Tom时，Tom成功被插入了student表中，但是视图中并不会显示这一行**
 >
@@ -2360,7 +2360,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 > CREATE [OR REPLACE] VIEW 视图名称[(列名列表)] AS SELECT ... [WITH[CASCADED | LOACAL ] CHECK OPTION]  # with后面的casecaded check option即为cascaded检查
 > ```
 >
-> ![image-20260403192210862](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260403192210862.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260403192210862.png" alt="image-20260403192210862" style="zoom:100%;" />
 >
 > 当加入cascaded check option后当插入数据不符合视图对应的select语句时就会报错
 
@@ -2379,13 +2379,13 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   上面的例子中创立了视图v1映射表a的select语句但并未对v1做cascaded检查，但是创建了视图v2映射v1的select语句加上了cascaded检查。  **此时MySQL会自动为视图v1加上cascaded检查，也就是说当你插入一行数据时，MySQL会检查这个数据的id是否大于等于10且小于等于20**
 >
->    ![image-20260403193826173](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260403193826173.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260403193826173.png" alt="image-20260403193826173" style="zoom:100%;" />
 >
->    ![image-20260403194311820](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260403194311820.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260403194311820.png" alt="image-20260403194311820" style="zoom:100%;" />
 >
 >   由上面两图可见，v2依赖于v1，所以检查完v2的条件还会检查v1的条件
 >
->    ![image-20260403194816740](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260403194816740.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260403194816740.png" alt="image-20260403194816740" style="zoom:100%;" />
 >
 >   当再创建一个依赖于v2的v3（不含检查选项），插入>15的数据是可行的。
 >
@@ -2477,7 +2477,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   DROP PROCEDURE 存储过程名称;
 >   ```
 >
-> ![image-20260406102055659](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406102055659.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406102055659.png" alt="image-20260406102055659" style="zoom:100%;" />
 >
 > **注意：**在终端界面创建存储过程时，由于SQL语句结尾的‘；’会被直接识别为结束 所以**无法读取到end；**
 >
@@ -2688,9 +2688,9 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > - 案例
 >
->    ![image-20260406134900934](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406134900934.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406134900934.png" alt="image-20260406134900934" style="zoom:100%;" />
 >
->     ![image-20260406141345177](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406141345177.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406141345177.png" alt="image-20260406141345177" style="zoom:100%;" />
 >
 >   > :star2:注意:star2:
 >   >
@@ -2718,7 +2718,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   DECLARE handler_action HANDLER FOR condition_value1,condition_value2... statement;
 >   ```
 >
->    :star2:![image-20260406140734145](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406140734145.png)
+>    :star2:<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406140734145.png" alt="image-20260406140734145" style="zoom:100%;" />
 >
 >   **当MySQL抛出的状态码满足某个条件时就执行exit/continue**
 
@@ -2740,7 +2740,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   END;
 >   ```
 >
->     ![image-20260406142541057](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406142541057.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406142541057.png" alt="image-20260406142541057" style="zoom:100%;" />
 >
 >      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260406143618503.png" alt="image-20260406143618503" style="zoom:50%;" />
 
@@ -2792,11 +2792,11 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > - 日志表的创建
 >
->     ![image-20260408162512847](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408162512847.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408162512847.png" alt="image-20260408162512847" style="zoom:100%;" />
 >
 > - insert触发器
 >
->    ![image-20260408162611549](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408162611549.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408162611549.png" alt="image-20260408162611549" style="zoom:100%;" />
 >
 >   > :star2:日志更新的触发器，上图为insert触发器 即：当向tb_user表中插入数据时 自动触发begin与end之间的SQL语句   
 >   >
@@ -2806,25 +2806,25 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   > 2. :star:**new代表插入的那一行数据 所以用 new.某字段 就可以取到刚插入的内容**
 >   > 3. concat是字符串拼接函数
 >
->    ![image-20260408163500408](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408163500408.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408163500408.png" alt="image-20260408163500408" style="zoom:100%;" />
 >
->    ![image-20260408163551019](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408163551019.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408163551019.png" alt="image-20260408163551019" style="zoom:100%;" />
 >
 >   看上两图可知触发器成功触发并向logs表中记录了插入日志
 >
 > - update触发器
 >
->    ![image-20260408164411750](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408164411750.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408164411750.png" alt="image-20260408164411750" style="zoom:100%;" />
 >
->    ![image-20260408164529921](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408164529921.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408164529921.png" alt="image-20260408164529921" style="zoom:100%;" />
 >
->    ![image-20260408164737327](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408164737327.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408164737327.png" alt="image-20260408164737327" style="zoom:100%;" />
 >
 > - delete触发器
 >
->    ![image-20260408165443730](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408165443730.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408165443730.png" alt="image-20260408165443730" style="zoom:100%;" />
 >
->    ![image-20260408165502127](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408165502127.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260408165502127.png" alt="image-20260408165502127" style="zoom:100%;" />
 
 
 
@@ -2848,7 +2848,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 > 其**典型的使用场景**是做**全库的逻辑备份**，对所有的表进行锁定，从而**获取一致性视图，保证数据的完整性。**
 >
-> ![image-20260411125507415](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411125507415.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411125507415.png" alt="image-20260411125507415" style="zoom:100%;" />
 >
 > > 如上图所示：当我们在备份数据库数据时，是一张一张表备份的，若在备份过程中有业务运行，向表中插入了数据，就会导致各个表中的数据不一致。
 >
@@ -2877,23 +2877,23 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   unlock tables;
 >   ```
 >
-> 1. 登陆至linux虚拟机上的MySQL数据库 此处的xin为超级权限用户（root被设置为只可在本地登陆）![image-20260411132044769](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411132044769.png)
+> 1. 登陆至linux虚拟机上的MySQL数据库 此处的xin为超级权限用户（root被设置为只可在本地登陆）<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411132044769.png" alt="image-20260411132044769" style="zoom:100%;" />
 >
 >    **（-h为远程登陆，后跟远程登陆主机ip地址）**
 >
 > 2. 加全局锁
 >
->     ![image-20260411132227369](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411132227369.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411132227369.png" alt="image-20260411132227369" style="zoom:100%;" />
 >
-> 3. 在命令行界面用mysqldump做数据备份![image-20260411132654296](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411132654296.png)
+> 3. 在命令行界面用mysqldump做数据备份<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411132654296.png" alt="image-20260411132654296" style="zoom:100%;" />
 >
 >    **（-h为远程登陆，后跟远程登陆主机ip地址）**
 >
 > 4. 解除锁
 >
->     ![image-20260411132813374](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411132813374.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411132813374.png" alt="image-20260411132813374" style="zoom:100%;" />
 >
-> ![image-20260411133055140](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411133055140.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411133055140.png" alt="image-20260411133055140" style="zoom:100%;" />
 
 #### 弊端
 
@@ -2909,9 +2909,9 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 > mysqldump --single-transaction -u 用户 -p 数据库名 > 数据库名.sql
 > ```
 >
-> ![image-20260411134140148](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411134140148.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411134140148.png" alt="image-20260411134140148" style="zoom:100%;" />
 >
-> ![image-20260411134200678](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411134200678.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411134200678.png" alt="image-20260411134200678" style="zoom:100%;" />
 
 ### 2.表级锁
 
@@ -2964,11 +2964,11 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 > | `insert`、`update`、`delete`、`select ... for update` | `SHARED_WRITE`                            | 与`SHARED_READ`、`SHARED_WRITE`兼容，与`EXCLUSIVE`互斥 |
 > | `alter table ...`                                     | `EXCLUSIVE`                               | 与其他的 MDL 都互斥                                    |
 >
-> ![image-20260411142720318](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411142720318.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411142720318.png" alt="image-20260411142720318" style="zoom:100%;" />
 >
 > > 如上图,在两个客户端的两个事务中,一个进行select查询 一个进行update更新 并不会引发阻塞.原因:select的锁是`SHARED_READ`(共享读) update的锁是`SHARED_WRITE`(共享写) 二者是兼容的
 >
-> ![image-20260411143012638](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411143012638.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411143012638.png" alt="image-20260411143012638" style="zoom:100%;" />
 >
 > > 上图可见 若是一个事务select 一个事务alter 就会被阻塞
 > >
@@ -2984,7 +2984,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   select object_type,object_schema,object_name,lock_type,lock_duration from performance_schema.metadata_locks;
 >   ```
 >
-> ![image-20260411143944644](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411143944644.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411143944644.png" alt="image-20260411143944644" style="zoom:100%;" />
 >
 > > 可见MDL锁是自动动态生成的
 
@@ -3023,11 +3023,11 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   select object_schema, object_name, index_name, lock_type, lock_mode, lock_data from performance_schema.data_locks;
 >   ```
 >
-> ![image-20260411150757123](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411150757123.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411150757123.png" alt="image-20260411150757123" style="zoom:100%;" />
 >
 > > 上图可见,在事务A中使用了select … `lock in share mode` 使得意向锁的类型为IS 并在事务B中以read(共享锁)的方式锁住同一张表 此时是不会发生阻塞的
 >
-> ![image-20260411151016454](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411151016454.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411151016454.png" alt="image-20260411151016454" style="zoom:100%;" />
 >
 > > 若是以write(排他锁)的方式锁同一张表就会被阻塞
 >
@@ -3080,11 +3080,11 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > > 上图可见普通的select并不会加锁，lock in share mode会加共享锁
 >
-> ![image-20260411162251080](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411162251080.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411162251080.png" alt="image-20260411162251080" style="zoom:100%;" />
 >
 > > 上图可见，当我们查询student表id为1的数据时给该行**上了一个共享锁**，上了共享锁后再对该行进行update时（**update会自动上排他锁**），就会冲突，所以会**阻塞**
 >
-> ![image-20260411163023696](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411163023696.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411163023696.png" alt="image-20260411163023696" style="zoom:100%;" />
 >
 > > 上图可见，当我们以name字段搜索数据并修改时，由于name字段并没有设立索引，所以行锁会被升级为表锁。升级为表锁后我们在另一个事务中去操作其他行的时候也会被阻塞。  （这解释了[update优化](7.update的优化（避免行锁升级为表锁）)）
 
@@ -3110,15 +3110,15 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >    >
 >    > **结果加了一个间隙锁**
 >
->     ![image-20260411164732063](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411164732063.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411164732063.png" alt="image-20260411164732063" style="zoom:100%;" />
 >
 >    > 上图**说明了间隙锁加在id=4和id=15之间**（向这个间隙内插入数据 被阻塞）
 >
-> 2.   ![image-20260411170459173](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411170459173.png)
+> 2.   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411170459173.png" alt="image-20260411170459173" style="zoom:100%;" />
 >
 >    > 上图可见，no是一个可重复的普通索引，当我们用no查询数据时，不仅会对查询到的数据本身加上共享锁，**还会对该条数据与下一个不同数据的间隙之间加上间隙锁**
 >
-> 3.  ![image-20260411171101096](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411171101096.png)
+> 3.  <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260411171101096.png" alt="image-20260411171101096" style="zoom:100%;" />
 >
 >    > tip：supremum意为正无穷
 >    >
@@ -3136,7 +3136,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 ### 1.逻辑存储结构
 
-> ![image-20260325145124260](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325145124260.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260325145124260.png" alt="image-20260325145124260" style="zoom:100%;" />
 >
 > 详见：[InnoDB的逻辑存储结构](#InnoDB的逻辑存储结构)
 >
@@ -3148,7 +3148,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 ### 2.架构
 
-![image-20260412151500676](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260412151500676.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260412151500676.png" alt="image-20260412151500676" style="zoom:100%;" />
 
 #### 内存结构
 
@@ -3170,7 +3170,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 > - Adaptive Hash Index（自适应哈希索引）
 >
 >   - 用于优化buffer pool数据查询。InnoDB会监控表上各索引页的查询，如果某一个等值查询经常被用到，InnoDB就会为其创建哈希值，这样就可以增快查询速度
->   - 自适应哈希**无需人工干预，系统根据情况自动完成**  参数：innodb_adaptive_hash_index![image-20260412155557029](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260412155557029.png)
+>   - 自适应哈希**无需人工干预，系统根据情况自动完成**  参数：innodb_adaptive_hash_index<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260412155557029.png" alt="image-20260412155557029" style="zoom:100%;" />
 >
 > - log buffer（日志缓冲区）
 >
@@ -3197,7 +3197,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   - 参数：innodb_file_per_table
 >
->      ![image-20260412161945360](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260412161945360.png)
+>      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260412161945360.png" alt="image-20260412161945360" style="zoom:100%;" />
 >
 > - General Tablespaces（通用表空间）
 >
@@ -3231,7 +3231,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 > - Redo log（重做日志）
 >
 >   - 用于实现事务的持久性。该日志文件由两部分组成：**重做日志缓冲（redo log buffer）**以及**重做日志文件（redo log）**，前者是在**内存中**，后者在**磁盘中**。当事务提交之后会**把所有修改信息都会存到该日志中**，用于在刷新脏页到磁盘时发生错误时，**进行数据恢复使用**。
->   - redo log以循环的方式写入重做日志文件，涉及到两个文件![image-20260412163911907](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260412163911907.png)当其中一个满了之后就写入到另一个里面，覆盖老数据
+>   - redo log以循环的方式写入重做日志文件，涉及到两个文件<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260412163911907.png" alt="image-20260412163911907" style="zoom:100%;" />当其中一个满了之后就写入到另一个里面，覆盖老数据
 
 #### 后台线程
 
@@ -3264,13 +3264,13 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 ### 3.事务原理
 
-![image-20260413183450507](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413183450507.png)
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413183450507.png" alt="image-20260413183450507" style="zoom:100%;" />
 
 #### redo log（重做日志）
 
 > 重做日志，记录的是**事务提交时数据页的物理修改**，是用来实现事务的**持久性**。 该日志文件由两部分组成：**重做日志缓冲**（redo log buffer）以及**重做日志文件**（redo log file），前者是在**内存**中，后者在**磁盘**中。当**事务提交之后**会把所有修改信息都存到该日志文件中，用于在**刷新脏页到磁盘，发生错误时，进行数据恢复使用。**
 
-> ![image-20260413184344233](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413184344233.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413184344233.png" alt="image-20260413184344233" style="zoom:100%;" />
 >
 > :star2:在我们操作数据时会先操作buffer pool中的缓存数据，操作完之后，被操作的页就被称为脏页。为了提升效率 节省磁盘IO 不会立即将修改后的脏页刷入磁盘 （详见：[内存结构](#内存结构)中的buffer pool）
 >
@@ -3316,7 +3316,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 > - 记录中的三个隐藏字段
 >
->    ![image-20260413191913488](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413191913488.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413191913488.png" alt="image-20260413191913488" style="zoom:100%;" />
 >
 >   | 隐藏字段    | 含义                                                         |
 >   | ----------- | ------------------------------------------------------------ |
@@ -3324,7 +3324,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   | DB_ROLL_PTR | 回滚**指针**，**指向这条记录的上个版本**，用于**配合 undo log（记录的各版本记在undo log中）** |
 >   | DB_ROW_ID   | 隐藏主键，**如果表结构没有指定主键**，将会生成该隐藏字段。   |
 >
->    ![image-20260413192504041](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413192504041.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413192504041.png" alt="image-20260413192504041" style="zoom:100%;" />
 >
 >   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413192543973.png" alt="image-20260413192543973" style="zoom:80%;" /> 
 >
@@ -3338,7 +3338,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   而**update、delete的时候**，产生的undo log日志不仅在回滚时需要，在**快照读时也需要**，**不会立即被删除。**
 >
->    :star2::star2::star2:示意图![image-20260413194015677](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413194015677.png)
+>    :star2::star2::star2:示意图<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413194015677.png" alt="image-20260413194015677" style="zoom:100%;" />
 >
 >   由上图就可知，undo log通过**链表串联起了多个历史版本的数据**，相当于**MVCC 的 “历史版本仓库”。**MVCC的**快照读**便是**基于此实现的**
 >
@@ -3357,7 +3357,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   - readview快照读规则
 >
->       ![image-20260413195600345](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413195600345.png)
+>       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260413195600345.png" alt="image-20260413195600345" style="zoom:100%;" />
 >
 >     **tip：**
 >
@@ -3381,7 +3381,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 ### 1.系统数据库
 
-> ![image-20260415182219137](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260415182219137.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260415182219137.png" alt="image-20260415182219137" style="zoom:100%;" />
 >
 > | 数据库             | 含义                                                         |
 > | ------------------ | ------------------------------------------------------------ |
@@ -3406,7 +3406,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   > 4. -P 指定链接端口
 >   > 5. -e 执行SQL语句并退出（通常用于脚本中）
 >   >
->   > ![image-20260415183527314](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260415183527314.png)
+>   > <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260415183527314.png" alt="image-20260415183527314" style="zoom:100%;" />
 >   >
 >   > 上图表名 通过**3306端口号**远程连接这台虚拟机上的mysql 以**密码cxy06908**（**注意，密码和-p需要紧挨着**） 登陆到root用户的**xin_db数据库** 并执行 **select * from student 执行后退出** 
 >
@@ -3424,9 +3424,9 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   >
 >   >      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260415184503695.png" alt="image-20260415184503695" style="zoom: 33%;" /> 查看变量
 >   >
->   >       ![image-20260415184553856](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260415184553856.png) 创建数据库
+>   >       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260415184553856.png" alt="image-20260415184553856" style="zoom:100%;" /> 创建数据库
 >   >
->   >       ![image-20260415184753800](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260415184753800.png)删除数据库
+>   >       <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260415184753800.png" alt="image-20260415184753800" style="zoom:100%;" />删除数据库
 >
 > - mysqlbinlog
 >
@@ -3509,13 +3509,13 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 > show variables like '%log_error%'; #查看文件位置
 > ```
 >
-> ![image-20260418131128896](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418131128896.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418131128896.png" alt="image-20260418131128896" style="zoom:100%;" />
 >
 > - 演示
 >
 >   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418131506084.png" alt="image-20260418131506084" style="zoom:50%;" />  修改mysql uuid
 >
->   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418132213148.png" alt="image-20260418132213148" style="zoom: 80%;" />![image-20260418132324574](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418132324574.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418132213148.png" alt="image-20260418132213148" style="zoom: 80%;" /><img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418132324574.png" alt="image-20260418132324574" style="zoom:100%;" />
 >
 >   可见error.log中写入了 无法获取uuid
 
@@ -3546,7 +3546,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   show variables like '%binlog_format%';#查看当前格式
 >   ```
 >
->    ![image-20260418133404251](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418133404251.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418133404251.png" alt="image-20260418133404251" style="zoom:100%;" />
 >
 >   - 修改格式类型
 >
@@ -3556,9 +3556,9 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   需要用mysqlbinlog工具将二进制日志转为文本格式 详见：MySQL管理[常用工具](#2.常用工具)中的mysqlbinlog
 >
->    ![image-20260418135141380](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418135141380.png)![image-20260418135227887](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418135227887.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418135141380.png" alt="image-20260418135141380" style="zoom:100%;" /><img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418135227887.png" alt="image-20260418135227887" style="zoom:100%;" />
 >
->    ![image-20260418135306670](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418135306670.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418135306670.png" alt="image-20260418135306670" style="zoom:100%;" />
 >
 >   > 当我们修改student中的内容后，去查看最新的那个binlog日志（binlog000060）【**-v**表示将日志中记录的**行数据变更重构为SQL语句**  tip：**-w会在重构的基础上输出注释信息**】
 >
@@ -3580,7 +3580,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >     show variables like '%binlog_expire%';
 >     ```
 >
->      ![image-20260418140743205](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418140743205.png)可见默认存放30天
+>      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418140743205.png" alt="image-20260418140743205" style="zoom:100%;" />可见默认存放30天
 >
 >     ```sql
 >     set @@binlog_expire_logs_seconds=xxx;#注意单位是秒
@@ -3598,9 +3598,9 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >   show variables like '%general%';
 >   ```
 >
->    ![image-20260418141105273](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418141105273.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418141105273.png" alt="image-20260418141105273" style="zoom:100%;" />
 >
->   如需开启，在`etc/mysql/my.cnf`配置文件中添加 `general_log=1`(开启查询日志) `general_log_file=xxx.log` （设置查询日志日志文件名，若不设定，默认文件名如上图所示）![image-20260418141952221](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418141952221.png) 
+>   如需开启，在`etc/mysql/my.cnf`配置文件中添加 `general_log=1`(开启查询日志) `general_log_file=xxx.log` （设置查询日志日志文件名，若不设定，默认文件名如上图所示）<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418141952221.png" alt="image-20260418141952221" style="zoom:100%;" /> 
 >
 >   ubuntu中要添加**[mysql]** 以明确这个是在mysql段下的
 
@@ -3612,7 +3612,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > 已开启，不过多赘述
 >
-> ![image-20260418143105883](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418143105883.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260418143105883.png" alt="image-20260418143105883" style="zoom:100%;" />
 
 
 
@@ -3624,11 +3624,11 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > 一台主库可以同时向多台从库进行复制，从库也可以作为其他库的主库，实现链状复制
 >
-> ![image-20260419170755004](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419170755004.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419170755004.png" alt="image-20260419170755004" style="zoom:100%;" />
 
 ### 2.底层原理
 
-> ![image-20260419171358185](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419171358185.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419171358185.png" alt="image-20260419171358185" style="zoom:100%;" />
 >
 > 1. Master 主库在**事务提交**时，会把数据变更记录在二进制日志文件 **Binlog** 中。 
 > 2. 从库通过**IOthread**（IO线程）**读取主库**的二进制日志文件 **Binlog**，**写入**到从库的**中继日志 Relay Log** 中。 
@@ -3638,33 +3638,33 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 
 > #### 主库配置
 >
-> - 数据库服务器的准备![image-20260419171959276](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419171959276.png)
+> - 数据库服务器的准备<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419171959276.png" alt="image-20260419171959276" style="zoom:100%;" />
 >
-> - 修改配置文件![image-20260419172607453](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419172607453.png)
+> - 修改配置文件<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419172607453.png" alt="image-20260419172607453" style="zoom:100%;" />
 >
-> - 创建远程连接账号，授予主从复制权限![image-20260419172853405](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419172853405.png)
+> - 创建远程连接账号，授予主从复制权限<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419172853405.png" alt="image-20260419172853405" style="zoom:100%;" />
 >
-> - 通过指令，查看二进制日志坐标![image-20260419173439808](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419173439808.png)
+> - 通过指令，查看二进制日志坐标<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419173439808.png" alt="image-20260419173439808" style="zoom:100%;" />
 >
 >   **获取主库当前二进制日志关键定位信息**，复制时从库依靠这组坐标，知道从哪个日志文件、哪个位置开始同步数据，**保证主从数据起点一致。**
 >
 > #### 从库配置
 >
-> - 修改配置文件![image-20260419173558229](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419173558229.png)
+> - 修改配置文件<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419173558229.png" alt="image-20260419173558229" style="zoom:100%;" />
 >
 >   主从复制进行**读写分离**，其中**从库是进行只读操作**的所以将read-only=1   若想要超级管理员也只读 可以super-read-only=1
 >
-> - 登陆MySQL设置主库配置![image-20260419173827764](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419173827764.png)
+> - 登陆MySQL设置主库配置<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260419173827764.png" alt="image-20260419173827764" style="zoom:100%;" />
 >
 >   上图指令在从库当中执行，旨在连接主库并登录超级用户进行复制
 >
 > - 启动主从复制
 >
->   ![image-20260625213920653](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260625213920653.png) 
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260625213920653.png" alt="image-20260625213920653" style="zoom:100%;" /> 
 >
 > - 查看主从复制状态
 >
->   ![image-20260625213958478](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260625213958478.png) 
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260625213958478.png" alt="image-20260625213958478" style="zoom:100%;" /> 
 
 
 
@@ -3684,7 +3684,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   当数据很多并持续增长时，若一直将所有数据都存入同一数据库的同一张表中，会使得查询效率**（CPU瓶颈）**大幅下降，并且会产生大量磁盘IO**（IO瓶颈）**
 >
->   ![image-20260625215008410](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260625215008410.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260625215008410.png" alt="image-20260625215008410" style="zoom:100%;" />
 >
 >   1. IO瓶颈：InnoDB引擎中，大部分的内存都分配给了缓冲区，用于减少IO次数。当热点数据过多时，使得内存被大量占用，缓冲区（缓存）分配到的内存就少了，从而IO次数增多
 >
@@ -3756,7 +3756,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > - schema.xml配置
 >
->   ![image-20260626094708449](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626094708449.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626094708449.png" alt="image-20260626094708449" style="zoom:100%;" />
 >
 >   可见，schema.xml配置即根据右图去**搭建起我们的逻辑结构**
 >
@@ -3810,7 +3810,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   - 场景
 >
->     ![image-20260626102742941](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626102742941.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626102742941.png" alt="image-20260626102742941" style="zoom:100%;" />
 >
 >    
 >
@@ -3850,7 +3850,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   - 配置
 >
->     ![image-20260626105012112](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626105012112.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626105012112.png" alt="image-20260626105012112" style="zoom:100%;" />
 >
 >     不同于垂直分片，水平分片需要指定分片规则
 
@@ -3916,7 +3916,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   - Mycat-eye
 >
->     ![image-20260626113544816](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626113544816.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626113544816.png" alt="image-20260626113544816" style="zoom:100%;" />
 >
 >     详见：[视频1](https://www.bilibili.com/video/BV1Kr4y1i7ru?spm_id_from=333.788.videopod.episodes&vd_source=d6f1919e59f384773719ad5aa3d3a0a9&p=185)   [视频2](https://www.bilibili.com/video/BV1Kr4y1i7ru?spm_id_from=333.788.videopod.episodes&vd_source=d6f1919e59f384773719ad5aa3d3a0a9&p=186)
 >
@@ -3948,7 +3948,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   - balance（负载均衡）参数
 >
->     ![image-20260626152209502](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626152209502.png)
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626152209502.png" alt="image-20260626152209502" style="zoom:100%;" />
 >
 >     其中1、2都可实现读写分离
 >
@@ -3974,11 +3974,11 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >       1. 修改配置文件
 >
->          ![image-20260626153659220](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626153659220.png)
+>          <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626153659220.png" alt="image-20260626153659220" style="zoom:100%;" />
 >
 >       2. 重启MySQL
 >
->          ![image-20260626153727123](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626153727123.png) 
+>          <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626153727123.png" alt="image-20260626153727123" style="zoom:100%;" /> 
 >
 >     - 主库2配置
 >
@@ -3994,7 +3994,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 > - 两台主库之间相互复制
 >
->   ![image-20260626154624697](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626154624697.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626154624697.png" alt="image-20260626154624697" style="zoom:100%;" />
 >
 >    
 >
@@ -4016,7 +4016,7 @@ SHOW [SESSION | GLOBAL] STATUS LIKE 'Com_______'; #查询某数据库增、删�
 >
 >   2. 配置balance参数及writeType和switch Type
 >
->      ![image-20260626155504908](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626155504908.png)
+>      <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/mysql/image-20260626155504908.png" alt="image-20260626155504908" style="zoom:100%;" />
 >
 >      writeType和switchType配合使用，实现当写入的主库挂了后自动切换至备用主库
 

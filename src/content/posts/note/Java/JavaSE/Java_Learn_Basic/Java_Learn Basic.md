@@ -45,7 +45,7 @@ draft: false
 
 #### main方法
 
-> ![image-20260605200024062](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260605200024062.png)
+> <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260605200024062.png" alt="image-20260605200024062" style="zoom:100%;" />
 
 #### 关键字
 
@@ -135,7 +135,7 @@ draft: false
 >
 >   **相似的浮点型float赋值后必须加F  不然默认为double**
 >
->    ![image-20260605212609050](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260605212609050.png)
+>    <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260605212609050.png" alt="image-20260605212609050" />
 >
 > - 注意4：Java中**没有unsigned关键字**用以定义无符号的数据类型
 >
@@ -441,7 +441,7 @@ draft: false
 
 > 1. ```java
 >    for(int i = 0;i<arr.length;i++){
->                                                                          
+>                                                                                
 >    }
 >    ```
 >
@@ -548,7 +548,7 @@ draft: false
 >
 > - 示例
 >
->   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260607112322176.png" alt="image-20260607112322176" style="zoom:50%;" />![image-20260607112747165](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260607112747165.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260607112322176.png" alt="image-20260607112322176" style="zoom:50%;" />![ima<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260607112747165.png" alt="image-20260607112747165" /><img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260607112747165.png" alt="image-20260607112747165" />
 >
 >   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260607112803370.png" alt="image-20260607112803370" style="zoom:50%;" />
 
@@ -1004,7 +1004,7 @@ draft: false
 >   ``` java
 >   ArrayList<String> list = new ArrayList<String> ();//String为引用型变量可以存入ArrayList中 
 >   //但像  ArrayList<int> list = new ArrayList<int> () 不行 因为int不是引用型变量
->                                               
+>                                                   
 >   //JDK7后可以简写为
 >   ArrayList<String> list = new ArrayList<> ()
 >   ```
@@ -1388,7 +1388,7 @@ draft: false
 >     if(a instanceof Dog){ //用instanceof先进行判断
 >         Dog d = (Dog) a;
 >     }
->                                                                                             
+>                                                                                                     
 >     //Jdk14后的新特性
 >     if(a instanceof Dog d); //表示先判断，若判断正确则直接强转，转换之后变量名为d
 >     ```
@@ -1820,12 +1820,12 @@ draft: false
 >       public class Student {
 >           ...;
 >       };  //一个完整的类
->                                                                             
+>                                                                                       
 >        //将名字去掉后成为匿名类
 >       {
 >         ...;  
 >       };
->                                                                             
+>                                                                                       
 >       //完整的类可以继承父类或调用接口 并对里面的方法进行重写
 >       public class Student (extends Person)/(implements Swim){
 >           ...;
@@ -1834,7 +1834,7 @@ draft: false
 >       (Person/Swim){
 >           ...;
 >       }
->                                                                             
+>                                                                                       
 >       //直接new创建匿名类对象
 >       new (Person/Swim){
 >           ...;
@@ -2206,11 +2206,11 @@ draft: false
 >
 > - 贪婪爬取
 >
->   ![image-20260614162730179](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260614162730179.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260614162730179.png" alt="image-20260614162730179" />
 >
 > - 非贪婪爬取
 >
->   ![image-20260614162759475](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260614162759475.png)
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260614162759475.png" alt="image-20260614162759475" />
 
 
 
@@ -2268,7 +2268,7 @@ draft: false
 >
 >     有参构造：设定时间
 >
->     ![image-20260614175144215](https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260614175144215.png) 
+>     <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/java/javase/image-20260614175144215.png" alt="image-20260614175144215" /> 
 >
 >   - 成员方法
 >
