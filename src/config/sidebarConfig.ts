@@ -26,7 +26,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 	// 当position为left时开启此项，文章详情页将额外显示右侧边栏
 	// 当position为right时开启此项，文章详情页将额外显示左侧边栏
 	// 适用在只想用单侧栏，但在文章详情页想用对侧栏的目录等组件的场景
-	showBothSidebarsOnPostPage: true,
+	showBothSidebarsOnPostPage: false,
 
 	// 左侧边栏组件配置列表
 	// 组件的渲染顺序完全取决于它们在配置数组中出现的顺序，但top的组件会优先于sticky位置的组件渲染
@@ -48,17 +48,57 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 是否在文章详情页显示
 			showOnPostPage: true,
 		},
-		{
-			// 组件类型：公告组件
-			type: "announcement",
-			// 是否启用该组件
+		// {
+		// 	// 组件类型：公告组件
+		// 	type: "announcement",
+		// 	// 是否启用该组件
+		// 	enable: true,
+		// 	// 组件位置
+		// 	position: "top",
+		// 	// 是否在文章详情页显示
+		// 	showOnPostPage: true,
+		// },
+
+		// {
+		// 	// 组件类型：分类组件
+		// 	type: "categories",
+		// 	// 是否启用该组件
+		// 	enable: true,
+		// 	// 组件位置
+		// 	position: "sticky",
+		// 	// 是否在文章详情页显示
+		// 	showOnPostPage: true,
+		// 	// 组件专属配置
+		// 	specificConfig: {
+		// 		// 折叠阈值：当分类数量超过>5个时自动折叠
+		// 		collapseThreshold: 5,
+		// 	},
+		// },
+		// {
+		// 	// 组件类型：标签组件
+		// 	type: "tags",
+		// 	// 是否启用该组件
+		// 	enable: true,
+		// 	// 组件位置
+		// 	position: "sticky",
+		// 	// 是否在文章详情页显示
+		// 	showOnPostPage: true,
+		// 	// 组件专属配置
+		// 	specificConfig: {
+		// 		// 折叠阈值：当标签数量超过>10个时自动折叠
+		// 		collapseThreshold: 10,
+		// 	},
+		// },
+		{	
+			//文章目录
+			type: "sidebarToc",
 			enable: true,
 			// 组件位置
-			position: "top",
+			position: "sticky",
 			// 是否在文章详情页显示
 			showOnPostPage: true,
 		},
-		{
+				{
 			// 组件类型：音乐播放器
 			type: "music",
 			// 是否启用该组件
@@ -67,37 +107,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			position: "sticky",
 			// 是否在文章详情页显示
 			showOnPostPage: true,
-		},
-		{
-			// 组件类型：分类组件
-			type: "categories",
-			// 是否启用该组件
-			enable: true,
-			// 组件位置
-			position: "sticky",
-			// 是否在文章详情页显示
-			showOnPostPage: true,
-			// 组件专属配置
-			specificConfig: {
-				// 折叠阈值：当分类数量超过>5个时自动折叠
-				collapseThreshold: 5,
-			},
-		},
-		{
-			// 组件类型：标签组件
-			type: "tags",
-			// 是否启用该组件
-			enable: true,
-			// 组件位置
-			position: "sticky",
-			// 是否在文章详情页显示
-			showOnPostPage: true,
-			// 组件专属配置
-			specificConfig: {
-				// 折叠阈值：当标签数量超过>10个时自动折叠
-				collapseThreshold: 10,
-			},
-		},
+		}
 	],
 
 	// 右侧边栏组件配置列表
