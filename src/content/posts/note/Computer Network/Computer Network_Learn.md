@@ -84,7 +84,7 @@ draft: false
 >
 > - 示意图<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420220927917.png" alt="image-20260420220927917" style="zoom:100%;" />
 > - :star:过程
->   1. 由于报文信息过长，**可能会引起缓存溢出的问题**，所以发送前发送方要对报文数据进行**预处理**，即：将**数据切割成等长小段**，并对每一段加上一个**首部**（首部存储了一些额外信息 如：发送目的地） <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420221221329.png" alt="image-20260420221221329" style="zoom:50%;" /> –>  —》   <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260420221240600.png" alt="image-20260420221240600" style="zoom:50%;" />
+>   1. 由于报文信息过长，**可能会引起缓存溢出的问题**，所以发送前发送方要对报文数据进行**预处理**，即：将**数据切割成等长小段**，并对每一段加上一个**首部**（首部存储了一些额外信息 如：发送目的地） <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260420221221329.png" alt="image-20260420221221329" style="zoom:50%;" /> –>    
 >   2. 预处理（分组）完后，主机将数据发给路由器，路由器将数据**存储于缓存中**，并解析首部**查转发表**找到发送的目的主机
 >   3. 找到转发主机后就如此循环**不断的存储转发数据（上图：R1–>R2–>R3）** 直到目的主机收到数据
 >   4. 目的主机收到数据后再将**首部拆除**，重新将分组数据**拼接**为原先的报文
@@ -1129,7 +1129,7 @@ draft: false
 >
 >     解决方法：对**确认分组**也进行**0/1间隔编号**即可
 >
->     ​          <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426110658819.png" alt="image-20260426110658819" style="zoom:50%;" />              <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260426110617192.png" alt="image-20260426110617192" style="zoom:50%;" />
+>     ​          <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426110658819.png" alt="image-20260426110658819" style="zoom:50%;" />              
 >
 >     由**图一**可见，若**不编号**，出现重复确认时会**将第二个确认认为是DATA1的确认**（但实际上DATA1的确认还没到），这样会导致**确认的顺序乱掉**；由图二可见 为确认0/1间隔编号后即可知重复确认并**丢弃**
 >
@@ -1167,7 +1167,7 @@ draft: false
 >
 > - 示意图
 >
->   <img src="../../../AppData/Roaming/Typora/typora-user-images/image-20260426120316044.png" alt="image-20260426120316044" style="zoom: 50%;" /><img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426121522762.png" alt="image-20260426121522762" style="zoom:100%;" />
+>   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426121522762.png" alt="image-20260426121522762" style="zoom:100%;" />
 >
 >   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260426121522762.png" alt="image-20260426121522762" style="zoom:50%;" />
 >
@@ -3985,13 +3985,13 @@ draft: false
 >     
 >
 >     - 接收方不应过分推迟发送确认
->            
+>                    
 >       ，否则会导致发送方不必要的超时重传，这反而浪费了网络的资源。
 >
 >       
 >
 >       TCP 标准规定，确认推迟的时间不应超过 0.5 秒。若收到一连串具有最大长度的报文段，则必须每隔一个报文段就发送一个确认 [RFC 1122]。
->            
+>                    
 >     - 捎带确认实际上并不经常发生，因为大多数应用程序很少同时在两个方向上发送数据。
 >
 >     
@@ -4918,12 +4918,6 @@ draft: false
 >   4RTT
 >
 >   <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/computer-network/image-20260514154633874.png" alt="image-20260514154633874" style="zoom:50%;" />
-
-
-
-
-
-
 
 
 

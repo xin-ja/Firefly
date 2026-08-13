@@ -57,7 +57,7 @@ draft: false
 > 3. 本地仓库（Local Repository）
 > 4. 远程仓库（Remote）
 
-<img src="https://www.runoob.com/wp-content/uploads/2015/02/git-workflow-runoob-1770781044589.svg" alt="img"  />
+<img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/git/git-workflow-runoob-1770781044589.svg" alt="img"  />
 
 <img src="https://xin-note-pic.oss-cn-hangzhou.aliyuncs.com/git/image-20260712113512167.png" alt="image-20260712113512167" style="zoom:50%;" />
 
