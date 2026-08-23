@@ -451,53 +451,56 @@ draft: false
   ```java
   class Solution {
       public List<List<Integer>> threeSum(int[] nums) {
-          List<List<Integer>> res = new ArrayList<>();
+          List<List<Integer>> ans = new ArrayList<>();
           Arrays.sort(nums);
           int n = nums.length;
-          for(int i = 0;i<n-2;i++){
-              int j = i+1;
-              int k = n-1;
-              //避免重复三元组
-              if(i>0&&nums[i] == nums[i-1])continue;
   
-              //两个优化
-              if(nums[j]+nums[j+1]>-nums[i])continue;
-              if(nums[k]+nums[k-1]<-nums[i])continue;
+          for (int i = 0; i < n; i++) {
+              if (i > 0 && nums[i] == nums[i - 1])//防止重复
+                  continue;
+              int target = -nums[i];
   
-              while(j<k){
-                  //将-nums[i]作为target
-                  int sum = nums[j] +nums[k];
+              //l = i+1  防止重复
+              int l = i+1, r = n - 1;
   
-                  if(sum>-nums[i]){
-                      k--;
+              while (l < r) {
+                  int sum = nums[l] + nums[r];
+  
+                  if (sum > target) {
+                      r--;
+                  } else if (sum < target) {
+                      l++;
+                  } else {
+                      List<Integer> temp = new ArrayList<>();
+                      temp.add(nums[i]);
+                      temp.add(nums[l]);
+                      temp.add(nums[r]);
+                      ans.add(temp);
+                      //不能直接break  还有可能有其他可能
+                      l++;
+                      r--;
+  
+                      //防止重复
+                      //注意此处：nums[l]==nums[l-1]  nums[r]==nums[r+1]
+                      //由于l是要向右动的，所以要和i-1比较，不然可能会遗漏
+                      //r同理
+                      //[-2,0,1,1,2]
+                      while(l<r && nums[l]==nums[l-1])l++;
+                      while(l<r && nums[r]==nums[r+1])r--;
                   }
-  
-                  else if(sum<-nums[i]){
-                      j++;
-                  }
-  
-                  else{
-                      List<Integer> list = new ArrayList<>();
-                      list.add(nums[i]);
-                      list.add(nums[j]);
-                      list.add(nums[k]);
-                      res.add(list);
-                      j++;
-                      k--;
-                      //避免重复三元组
-                      while(j<k && nums[j]==nums[j-1])j++;
-                      while(j<k&&nums[k]==nums[k+1])k--;
-                  }
-  
               }
+  
+              
           }
-          return res;
+  
+          return ans;
       }
   }
-  ```
-
   
-
+  ```
+  
+  
+  
   
 
 ### [7. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)
@@ -1212,60 +1215,81 @@ draft: false
 
   本质滑动窗口 需要注意以下几点
 
-  1. 不要HashSet去重，因为目标字符串中可能有多个相同的字母如aaa，需要用cnt计数，判断其个数是否相同
-  2. 结果的更新最好放在while循环内，这样更新出来的结果都是满足题目要求的，可以避免出现很多边界情况（将更新放在循环外会有很多边界情况）
-  3. check函数使用遍历a-z  A-Z  而不是遍历t[]数组里的字符，原因是t数组里的字符很有可能>52 这样一来运行效率大大减慢
-  4. cntW和cntT的大小为128  原因：根据ASCII码存储字符出现个数
+  1. check函数使用遍历a-z A-Z 而不是遍历t[]数组里的字符，原因是t数组里的字符很有可能>52 这样一来运行效率大大减慢
+  2. 应该使用check函数来判断是否符合要求，而非`Arrays.equals`，原因：$s = abbbbc \space\space\space t=abc$，答案为$abbbbc$，可见，题目要求的“覆盖”，不能等价于“与子串中字母一一对应”
+
+  - 扩容与缩容
+
+    - 扩容
+
+      自然扩容，每有一个就纳入，无限制条件
+
+    - 缩容
+
+      $win$可以覆盖$cnt$时，持续缩容，直至$win$不可以覆盖$cnt$。注意在缩容过程中记录最小值
 
 - 代码
 
   ```java
   class Solution {
       public String minWindow(String S, String T) {
-          char s[] = S.toCharArray();
-          char t[] = T.toCharArray();
+          char[] s = S.toCharArray();
+          char[] t = T.toCharArray();
   
-          int[] cntW = new int[128];//窗口中的字符统计
-          int[] cntT = new int[128];
-  
-          for(char ch:t){
-              cntT[ch]++;
+          int m = s.length;
+          int n = t.length;
+          if (n > m) {
+              return "";
           }
   
-          int min_len = 10000000;
-          int l_index = -1,r_index = s.length;
-          for(int r = 0,l = 0;r<s.length;r++){
-              cntW[s[r]]++;
-              while(check(cntW,cntT)){
-                  if(r-l<min_len){
-                      min_len = r-l;
-                      l_index = l;
-                      r_index = r;
+          int cnt[] = new int[128];
+          int win[] = new int[128];
+  
+          for (char ch : t) {
+              cnt[ch]++;
+          }
+  
+          int min = Integer.MAX_VALUE;
+          int ansLeft = 0;
+          int ansRight = 0;
+  
+          for (int right = 0, left = 0; right < m; right++) {
+              win[s[right]]++;
+  
+              //check函数检验是否覆盖，注意覆盖！= 一一对应
+              while (check(cnt, win)) {
+                  win[s[left++]]--;
+                  if (right - left + 1 < min) {
+                      min = right - left + 1;
+                      ansLeft = left - 1;
+                      ansRight = right + 1;
                   }
-                  cntW[s[l]]--;
-                  l++;
               }
   
           }
-          return l_index<0?"":S.substring(l_index,r_index+1);
+  
+          return S.substring(ansLeft, ansRight);
       }
   
-      public boolean check(int[] cntW,int[] cntT){
-          for(int c = 'a';c<='z';c++){
-              if(cntW[c]<cntT[c]){
+  //check函数，用于检验win（窗口中的字母统计）是否覆盖了cnt（子串的字母统计）
+      private boolean check(int[] cnt, int[] win) {
+          for (int c = 'a'; c <= 'z'; c++) {
+              if (cnt[c] > win[c]) {
                   return false;
               }
           }
-          for(int c = 'A';c<='Z';c++){
-              if(cntW[c]<cntT[c]){
+  
+          for (int c = 'A'; c <= 'Z'; c++) {
+              if (cnt[c] > win[c]) {
                   return false;
               }
           }
+  
           return true;
       }
   }
   ```
-
+  
   
 
 ## 前缀和
@@ -1392,7 +1416,10 @@ draft: false
           int ans = 0;
           //sum[0]也要算上  注意此处是n+1---sum[n] = nums[0]+... +nums[n-1]
           for(int i = 0;i<n+1;i++){
-              //找i左边的符合条件的 --- i左边的元素已经被统计进hashMao
+              //找i左边的符合条件的 --- i左边的元素已经被统计进hashMap
+              //sum[i] - sum[j] = k i>j
+              //注意i>j，所以需要在遍历的过程中去记录，记录到map里的就是j，当前遍历到的元素就是i
+              //如此一来j都存入了map，都是已知的。从map中找j即可
               int target = sum[i]-k;
               
               ans+=hm.getOrDefault(target,0);
