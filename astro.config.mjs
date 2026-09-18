@@ -234,6 +234,10 @@ export default defineConfig({
 				// 根据页面开关配置过滤sitemap
 				const url = new URL(page);
 				const pathname = url.pathname;
+				// 旧数字分页地址仅用于兼容跳转，不应进入规范索引。
+				if (/^\/\d+\/?$/.test(pathname)) {
+					return false;
+				}
 				if (pathname === "/dynamic/" && !siteConfig.pages.dynamic) {
 					return false;
 				}

@@ -1,0 +1,139 @@
+---
+import { Icon } from "astro-icon/components";
+import { lithosLandingConfig } from "@/config";
+import { url } from "@/utils/url-utils";
+
+const { brand, images, navItems, primaryAction, secondaryAction } =
+	lithosLandingConfig;
+---
+
+<main
+	id="lithos-landing"
+	class="lithos-landing"
+	style={`--lithos-spotlight-x: -9999px; --lithos-spotlight-y: -9999px;`}
+	data-spotlight-ready="false"
+	data-spotlight-visible="false"
+	aria-labelledby="lithos-landing-title"
+>
+	<div
+		class="lithos-landing__base"
+		aria-hidden="true"
+		style={`background-image: url("${images.base}");`}
+	></div>
+	<div
+		id="lithos-landing-spotlight"
+		class="lithos-landing__spotlight"
+		data-image={images.spotlight}
+		aria-hidden="true"
+		style={`background-image: url("${images.spotlight}");`}
+	></div>
+	<div class="lithos-landing__shade" aria-hidden="true"></div>
+
+	<header class="lithos-landing__header">
+		<a
+			href={url("/")}
+			class="lithos-landing__brand"
+			aria-label={brand}
+			data-no-swup="true"
+		>
+			<svg
+				class="lithos-landing__brand-mark"
+				viewBox="0 0 256 256"
+				fill="none"
+				aria-hidden="true"
+			>
+				<path
+					d="M 256 256 L 128 256 L 0 128 L 128 128 Z M 256 128 L 128 128 L 0 0 L 128 0 Z"
+					fill="currentColor"
+				/>
+			</svg>
+			<span>{brand}</span>
+		</a>
+
+		<nav class="lithos-landing__nav" aria-label="Blog navigation">
+			{navItems.map((item) => (
+				<a href={url(item.href)} data-no-swup="true">{item.label}</a>
+			))}
+		</nav>
+
+		<div class="lithos-landing__actions">
+			<a
+				href={url(secondaryAction.href)}
+				class="lithos-landing__about"
+				data-no-swup="true"
+			>
+				{secondaryAction.label}
+			</a>
+			<button
+				type="button"
+				id="lithos-menu-open"
+				class="lithos-landing__menu-button"
+				aria-label="打开导航菜单"
+				aria-expanded="false"
+				aria-controls="lithos-mobile-navigation"
+			>
+				<Icon name="material-symbols:menu-rounded" class="lithos-landing__icon" aria-hidden="true" />
+			</button>
+		</div>
+	</header>
+
+	<h1 id="lithos-landing-title" class="lithos-landing__heading">
+		<span class="lithos-landing__heading-line" style="animation-delay: 250ms;">Welcome to</span>
+		<span class="lithos-landing__heading-line" style="animation-delay: 420ms;">Xin's Blog</span>
+	</h1>
+
+	<a
+		href={url(primaryAction.href)}
+		class="lithos-landing__cta"
+		data-no-swup="true"
+	>
+		{primaryAction.label}
+		<Icon name="material-symbols:arrow-outward-rounded" class="lithos-landing__icon" aria-hidden="true" />
+	</a>
+
+	<div id="lithos-mobile-backdrop" class="lithos-landing__backdrop" hidden></div>
+	<aside
+		id="lithos-mobile-navigation"
+		class="lithos-landing__drawer"
+		hidden
+		inert
+		role="dialog"
+		aria-modal="true"
+		aria-label="移动端导航"
+	>
+		<div class="lithos-landing__drawer-head">
+			<span class="lithos-landing__drawer-brand">{brand}</span>
+			<button
+				type="button"
+				id="lithos-menu-close"
+				class="lithos-landing__close-button"
+				aria-label="关闭导航菜单"
+			>
+				<Icon name="material-symbols:close-rounded" class="lithos-landing__icon" aria-hidden="true" />
+			</button>
+		</div>
+		<nav class="lithos-landing__drawer-nav" aria-label="移动端博客导航">
+			{navItems.map((item, index) => (
+				<a
+					href={url(item.href)}
+					data-menu-link
+					data-menu-first={index === 0 ? "true" : undefined}
+					data-no-swup="true"
+				>
+					<span>{item.label}</span>
+					<Icon name="material-symbols:arrow-outward-rounded" class="lithos-landing__icon" aria-hidden="true" />
+				</a>
+			))}
+			<a
+				href={url(secondaryAction.href)}
+				class="lithos-landing__drawer-about"
+				data-menu-link
+				data-no-swup="true"
+			>
+				{secondaryAction.label}
+			</a>
+		</nav>
+	</aside>
+</main>
+
+<script src="../../scripts/lithos-landing.ts"></script>

@@ -1,0 +1,88 @@
+---
+import GoogleAnalytics from "@components/analytics/GoogleAnalytics.astro";
+import La51Analytics from "@components/analytics/La51Analytics.astro";
+import MicrosoftClarity from "@components/analytics/MicrosoftClarity.astro";
+import UmamiAnalytics from "@components/analytics/UmamiAnalytics.astro";
+import { analyticsConfig, profileConfig, siteConfig } from "@/config";
+import { defaultFavicons } from "@/constants/icon";
+import type { Favicon } from "@/types/config";
+import { url } from "@/utils/url-utils";
+
+import "@/styles/lithos-landing.css";
+
+const pageTitle = `Welcome to ${siteConfig.title}`;
+const pageDescription = siteConfig.description || pageTitle;
+const favicons: Favicon[] =
+	siteConfig.favicon.length > 0 ? siteConfig.favicon : defaultFavicons;
+const siteLang = siteConfig.lang.replace("_", "-");
+---
+
+<!doctype html>
+<html lang={siteLang} class="lithos-landing-html">
+	<head>
+		<meta charset="UTF-8" />
+		<title>{pageTitle}</title>
+		<meta name="description" content={pageDescription} />
+		{siteConfig.keywords && siteConfig.keywords.length > 0 && (
+			<meta name="keywords" content={siteConfig.keywords.join(", ")} />
+		)}
+		<meta name="author" content={profileConfig.name} />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#050605" />
+		<meta property="og:site_name" content={siteConfig.title} />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={pageDescription} />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={pageTitle} />
+		<meta name="twitter:description" content={pageDescription} />
+		<link rel="canonical" href={Astro.url.href} />
+		{
+			favicons.map((favicon) => (
+				<link
+					rel="icon"
+					href={favicon.src.startsWith("/") ? url(favicon.src) : favicon.src}
+					sizes={favicon.sizes}
+					media={favicon.theme && `(prefers-color-scheme: ${favicon.theme})`}
+				/>
+			))
+		}
+		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={url("/rss.xml")} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&display=swap"
+		/>
+		{analyticsConfig?.googleAnalyticsId && (
+			<GoogleAnalytics analyticsId={analyticsConfig.googleAnalyticsId} />
+		)}
+		{analyticsConfig?.microsoftClarityId && (
+			<MicrosoftClarity clarityId={analyticsConfig.microsoftClarityId} />
+		)}
+		{analyticsConfig?.umamiAnalytics?.websiteId && (
+			<UmamiAnalytics
+				websiteId={analyticsConfig.umamiAnalytics.websiteId}
+				scriptUrl={analyticsConfig.umamiAnalytics.scriptUrl}
+				replaysScriptUrl={analyticsConfig.umamiAnalytics.replaysScriptUrl}
+				trackOutboundLinks={analyticsConfig.umamiAnalytics.trackOutboundLinks}
+				collectWebVitals={analyticsConfig.umamiAnalytics.collectWebVitals}
+				replays={analyticsConfig.umamiAnalytics.replays}
+			/>
+		)}
+		{analyticsConfig?.la51Analytics?.Id && (
+			<La51Analytics
+				analyticsId={analyticsConfig.la51Analytics.Id}
+				sdkUrl={analyticsConfig.la51Analytics.sdkUrl}
+				ck={analyticsConfig.la51Analytics.ck}
+				autoTrack={analyticsConfig.la51Analytics.autoTrack}
+				hashMode={analyticsConfig.la51Analytics.hashMode}
+				screenRecord={analyticsConfig.la51Analytics.screenRecord}
+			/>
+		)}
+	</head>
+	<body class="lithos-landing-body">
+		<slot />
+	</body>
+</html>

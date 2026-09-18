@@ -1,0 +1,58 @@
+---
+import type { GetStaticPaths } from "astro";
+import Pagination from "@/components/common/Pagination.astro";
+import PostPage from "@/components/layout/PostPage.astro";
+import { siteConfig } from "@/config";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+import { getSortedPosts } from "@/utils/content-utils";
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const allBlogPosts = await getSortedPosts();
+	const pageSize = siteConfig.pagination.postsPerPage;
+	return paginate(allBlogPosts, { pageSize });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const len = page.data.length;
+---
+
+<MainGridLayout>
+	<PostPage page={page} />
+	{
+		page.total > page.size && (
+			<Pagination
+				class="mx-auto onload-animation"
+				page={page}
+				basePath="/blog/"
+				style={`animation-delay: calc(var(--content-delay) + ${len * 50}ms)`}
+			/>
+		)
+	}
+</MainGridLayout>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const responsiveEnabled = true;
+		if (!responsiveEnabled) return;
+
+		const getDeviceType = () => {
+			if (typeof window === "undefined") return "desktop";
+			if (window.innerWidth < 768) return "mobile";
+			if (window.innerWidth < 1024) return "tablet";
+			return "desktop";
+		};
+
+		const applyDeviceType = () => {
+			const deviceType = getDeviceType();
+			document.body.classList.remove("device-mobile", "device-tablet", "device-desktop");
+			document.body.classList.add(`device-${deviceType}`);
+		};
+
+		applyDeviceType();
+		let resizeTimeout: number | undefined;
+		window.addEventListener("resize", function () {
+			if (resizeTimeout) window.clearTimeout(resizeTimeout);
+			resizeTimeout = window.setTimeout(applyDeviceType, 250);
+		});
+	});
+</script>

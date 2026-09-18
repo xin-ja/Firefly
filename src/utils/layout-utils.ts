@@ -68,15 +68,13 @@ export const getDefaultBackground = (): string => {
 
 // 检查是否为首页
 export const isHomePage = (pathname: string): boolean => {
-	// 获取 base URL
+	// 博客列表迁移到 /blog/，根路径现在是独立的起始页。
 	const baseUrl = import.meta.env.BASE_URL || "/";
-	const baseUrlNoSlash = baseUrl.endsWith("/") ? baseUrl.slice(0, -1) : baseUrl;
+	const normalizedBaseUrl = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
+	const blogUrl = `${normalizedBaseUrl}blog/`;
+	const blogUrlNoSlash = blogUrl.slice(0, -1);
 
-	if (pathname === baseUrl) return true;
-	if (pathname === baseUrlNoSlash) return true;
-	if (pathname === "/") return true;
-
-	return false;
+	return pathname === blogUrl || pathname === blogUrlNoSlash;
 };
 
 // 获取横幅偏移量

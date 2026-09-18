@@ -558,7 +558,7 @@ const relatedPosts = await getRelatedPosts(entry, 5);
     class="flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full"
   >
     <a
-      href={entry.data.nextSlug ? getPostUrlBySlug(entry.data.nextSlug) : url("/")}
+      href={entry.data.nextSlug ? getPostUrlBySlug(entry.data.nextSlug) : url("/blog/")}
       class="w-full font-bold overflow-hidden active:scale-95"
     >
       <div class="btn-card rounded-2xl w-full h-15 max-w-full px-4 flex items-center justify-start! gap-4">
@@ -573,7 +573,7 @@ const relatedPosts = await getRelatedPosts(entry, 5);
     </a>
 
     <a
-      href={entry.data.prevSlug ? getPostUrlBySlug(entry.data.prevSlug) : url("/")}
+      href={entry.data.prevSlug ? getPostUrlBySlug(entry.data.prevSlug) : url("/blog/")}
       class="w-full font-bold overflow-hidden active:scale-95"
     >
       <div class="btn-card rounded-2xl w-full h-15 max-w-full px-4 flex items-center justify-end! gap-4">

@@ -13,7 +13,7 @@ const { currentPostCategory } = Astro.props as Props;
 
 const categories = await getCategoryList();
 const totalPosts = (await getSortedPostsList()).length;
-const homeUrl = url("/");
+const homeUrl = url("/blog/");
 const archiveUrl = url("/archive/");
 
 // 服务端计算初始高亮 pill（首屏无需等 JS）。

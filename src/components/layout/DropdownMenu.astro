@@ -20,6 +20,7 @@ if (!link) {
 const processedLink = link;
 
 const hasChildren = processedLink.children && processedLink.children.length > 0;
+const isLandingLink = !processedLink.external && processedLink.url === "/";
 ---
 
 <div class:list={["dropdown-container", className]} data-dropdown>
@@ -58,6 +59,7 @@ const hasChildren = processedLink.children && processedLink.children.length > 0;
 		<a 
 			aria-label={processedLink.name} 
 			href={processedLink.external ? processedLink.url : url(processedLink.url)} 
+			data-no-swup={isLandingLink ? "true" : undefined}
 			target={processedLink.external ? "_blank" : null}
 			class="btn-plain scale-animation rounded-lg h-10 font-bold px-4 active:scale-95"
 		>

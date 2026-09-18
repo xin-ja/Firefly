@@ -45,6 +45,7 @@ export { analyticsConfig } from "./analyticsConfig"; // 统计分析配置
 export { announcementConfig } from "./announcementConfig"; // 公告配置
 // 样式配置
 export { backgroundWallpaper } from "./backgroundWallpaper"; // 背景壁纸配置
+export { lithosLandingConfig } from "./lithosLandingConfig"; // 独立起始页配置
 export { booknavConfig, booknavPageConfig } from "./booknavConfig"; // 书签导航配置
 // 功能配置
 export { commentConfig } from "./commentConfig"; // 评论系统配置
