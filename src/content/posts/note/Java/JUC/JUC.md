@@ -1,3 +1,19 @@
+---
+
+title: JUC
+
+published: 2026-09-25
+
+description: JUC
+
+tags: [JUC]
+
+category: JUC
+
+draft: false
+
+---
+
 # JUC
 
 ## 1.进程和线程
